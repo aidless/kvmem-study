@@ -107,6 +107,7 @@ python3 tools/capacity.py path/to/model.ninfer --selftest            # 需要模
 | `kvmem-study/blog/…` | `blog/…` |
 | `kvmem-study/tools/…` | `tools/…` |
 | `kvmem-study/remote/…` | `artifacts/remote/…` |
+| `notes/2026-11-17-ninfer上游与分支血缘核验.md` | `artifacts/lineage-note.md`（19 处引用，已脱敏） |
 | `kvmem-study/kaggle/…` | `kernels/…` |
 | `kvmem-study/models/qwen3_5_4b_mtp.ninfer` | **未随仓库发布**（2.8 GB，按 `artifacts/remote/PHASE-A-PROVENANCE.md` 自行制备） |
 | `kvmem-study/ninfer-src/` | **未随仓库发布**（上游源码，按上面 commit 自行 clone） |

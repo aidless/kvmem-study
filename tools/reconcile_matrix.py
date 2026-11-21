@@ -99,12 +99,12 @@ def reconcile(doc):
 SELFTEST_GOOD = {
     "matrix": {
         "main": [{"tag": "m-b8192-ctx8192", "host_mib": 2048,
-                  "run": {"returncode": -15, "alive_after_probe": True, "ready": {"ready": True},
+                  "run": {"returncode": -15, "alive_after_probe": True, "ready": {"ready": True, "ready_after_seconds": 22.0},
                           "stats": {"ok": True, "hybrid": {"snapshot_hits": 1}}}},
                  {"tag": "m-b8192-ctx131072", "status": "STRUCTURAL_NO",
                   "reason": "kv_capacity must be at least max_context"}],
         "hsweep": [{"tag": "h-0", "host_mib": 0,
-                    "run": {"returncode": -15, "alive_after_probe": True, "ready": {"ready": True},
+                    "run": {"returncode": -15, "alive_after_probe": True, "ready": {"ready": True, "ready_after_seconds": 22.0},
                             "stats": {"ok": True, "hybrid": {k: 0 for k in HOST_ZERO_WRITE_KEYS}}}}],
     }
 }

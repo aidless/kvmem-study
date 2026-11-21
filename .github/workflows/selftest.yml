@@ -1,0 +1,26 @@
+name: selftest
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  selftest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: reconcile_matrix (RED→GREEN, both rounds)
+        run: |
+          python3 tools/reconcile_matrix.py --selftest
+          python3 tools/reconcile_matrix.py --selftest --round2
+
+      - name: capacity_engine (19 assertions)
+        run: python3 tools/capacity_engine.py --selftest
+
+      - name: capacity27 (13 assertions)
+        run: python3 tools/capacity27.py --selftest
