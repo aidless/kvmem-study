@@ -1,0 +1,173 @@
+[{"stream_name":"stdout","time":0.706968259,"data":"=== STAGE probe_toolchain start\n"}
+,{"stream_name":"stdout","time":0.707003314,"data":"+ nvidia-smi -L\n"}
+,{"stream_name":"stdout","time":0.751031188,"data":"+ nvcc --version\n"}
+,{"stream_name":"stdout","time":0.768084639,"data":"+ gcc --version\n"}
+,{"stream_name":"stdout","time":0.792800883,"data":"+ cmake --version\n"}
+,{"stream_name":"stdout","time":1.14552065,"data":"+ ninja --version\n"}
+,{"stream_name":"stdout","time":1.150629283,"data":"+ df -h /tmp\n"}
+,{"stream_name":"stdout","time":1.153364204,"data":"+ free -g\n"}
+,{"stream_name":"stdout","time":1.1724161,"data":"+ cmake --version\n"}
+,{"stream_name":"stdout","time":1.3261995,"data":"+ ninja --version\n"}
+,{"stream_name":"stdout","time":1.3282622370000001,"data":"+ ninja --version\n"}
+,{"stream_name":"stdout","time":1.33027156,"data":"{\n"}
+,{"stream_name":"stdout","time":1.330286474,"data":"  \"nvidia_smi\": \"GPU 0: Tesla T4 (UUID: GPU-8e4979f3-7158-5ee4-56ef-9145edfdc106)\",\n"}
+,{"stream_name":"stdout","time":1.330291072,"data":"  \"nvcc\": \"nvcc: NVIDIA (R) Cuda compiler driver\",\n"}
+,{"stream_name":"stdout","time":1.330295386,"data":"  \"gcc\": \"gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\",\n"}
+,{"stream_name":"stdout","time":1.330299347,"data":"  \"cmake\": \"cmake version 3.31.10\",\n"}
+,{"stream_name":"stdout","time":1.330303459,"data":"  \"ninja\": \"1.13.2.git.kitware.jobserver-pipe-1\",\n"}
+,{"stream_name":"stdout","time":1.3303072,"data":"  \"disk_tmp\": \"Filesystem      Size  Used Avail Use% Mounted on\\noverlay         8.0T  7.1T  967G  89% /\",\n"}
+,{"stream_name":"stdout","time":1.33031185,"data":"  \"mem\": \"total        used        free      shared  buff/cache   available\\nMem:              31           1          26           0           4          30\\nSwap:              0           0           0\",\n"}
+,{"stream_name":"stdout","time":1.330317435,"data":"  \"cmake_resolved\": \"3.31.10\",\n"}
+,{"stream_name":"stdout","time":1.330321049,"data":"  \"ninja_resolved\": \"1.13.2.git.kitware.jobserver-pipe-1\"\n"}
+,{"stream_name":"stdout","time":1.330324535,"data":"}\n"}
+,{"stream_name":"stdout","time":1.33032887,"data":"=== STAGE probe_toolchain OK {'ok': True, 'seconds': 0.6, 'detail': {'nvidia_smi': 'GPU 0: Tesla T4 (UUID: GPU-8e4979f3-7158-5ee4-56ef-9145edfdc106)', 'nvcc': 'nvcc: NVIDIA (R) Cuda compiler driver', 'gcc': 'gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0', 'cmake': 'cmake version 3.31.10', 'ninja': '1.13.2.git.kitware.jobserver-pipe-1', 'disk_tmp': 'Filesystem      Size  Used Avail Use% Mounted on\\noverlay         8.0T  7.1T  967G  89% /', 'mem': 'total        used        free      shared  buff/cache   available\\nMem:              31           1          26           0           4          30\\nSwap:              0           0           0', 'cmake_resolved': '3.31.10', 'ninja_resolved': '1.13.2.git.kitware.jobserver-pipe-1'}}\n"}
+,{"stream_name":"stdout","time":1.330337832,"data":"=== STAGE extract_kvmem start\n"}
+,{"stream_name":"stdout","time":64.642536339,"data":"kvmem tree: /tmp/work/kvmem (from /kaggle/input/datasets/<kaggle-user>/kvmem-src/kvmem-master) VERSION=0.19.0 files=1016\n"}
+,{"stream_name":"stdout","time":64.64257387399999,"data":"=== STAGE extract_kvmem OK {'ok': True, 'seconds': 63.3, 'detail': {'tree': '/tmp/work/kvmem', 'source': '/kaggle/input/datasets/<kaggle-user>/kvmem-src/kvmem-master', 'version': '0.19.0', 'files': 1016}}\n"}
+,{"stream_name":"stdout","time":64.642582743,"data":"=== STAGE prepare_ninfer start\n"}
+,{"stream_name":"stdout","time":64.64267601,"data":"+ git init /tmp/work/kvmem/backends/ninfer\n"}
+,{"stream_name":"stdout","time":64.703446636,"data":"+ git -C /tmp/work/kvmem/backends/ninfer remote add origin https://github.com/iamwavecut/ninfer-all.git\n"}
+,{"stream_name":"stdout","time":64.709771859,"data":"+ git -C /tmp/work/kvmem/backends/ninfer fetch --depth 1 origin 6cc1f9fa438b7094685ae417dfa40e1ca324e617\n"}
+,{"stream_name":"stdout","time":67.621206406,"data":"+ git -C /tmp/work/kvmem/backends/ninfer checkout --detach 6cc1f9fa438b7094685ae417dfa40e1ca324e617\n"}
+,{"stream_name":"stdout","time":68.106366713,"data":"+ git -C /tmp/work/kvmem/backends/ninfer rev-parse HEAD\n"}
+,{"stream_name":"stdout","time":68.108870288,"data":"+ git -C /tmp/work/kvmem init\n"}
+,{"stream_name":"stdout","time":68.112676973,"data":"+ git -C /tmp/work/kvmem add -A\n"}
+,{"stream_name":"stdout","time":68.886049271,"data":"+ git -C /tmp/work/kvmem commit -m kvmem snapshot\n"}
+,{"stream_name":"stdout","time":69.010205206,"data":"+ /usr/bin/python3 scripts/prepare-backends.py --backend ninfer\n"}
+,{"stream_name":"stdout","time":114.424716152,"data":"=== STAGE prepare_ninfer OK {'ok': True, 'seconds': 49.8, 'detail': {'head': '6cc1f9fa438b7094685ae417dfa40e1ca324e617', 'prepare_tail': 'ninfer: 6cc1f9fa438b + 48 patches ready\\n'}}\n"}
+,{"stream_name":"stdout","time":114.424751504,"data":"=== STAGE fetch_media start\n"}
+,{"stream_name":"stdout","time":114.424757234,"data":"+ bash scripts/fetch-media-sources.sh\n"}
+,{"stream_name":"stdout","time":115.792415132,"data":"=== STAGE fetch_media OK {'ok': True, 'seconds': 1.4, 'detail': {'seconds': 1.4, 'dir': '/tmp/work/kvmem/backends/ninfer/third_party/media-sources', 'files': [{'name': 'dav1d-1.5.4.tar.xz', 'bytes': 1038852}, {'name': 'ffmpeg-9.0.2.tar.xz', 'bytes': 12040788}]}}\n"}
+,{"stream_name":"stdout","time":115.792436085,"data":"=== STAGE configure start\n"}
+,{"stream_name":"stdout","time":115.792440123,"data":"+ cmake -S /tmp/work/kvmem/backends/ninfer -B /tmp/work/kvmem/backends/ninfer/build-sm75 -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_CUDA_ARCHITECTURES=75 -DNINFER_BUILD_APPS=ON\n"}
+,{"stream_name":"stdout","time":120.840035731,"data":"=== STAGE configure FAIL: command failed rc=1: ['cmake', '-S', '/tmp/work/kvmem/backends/ninfer', '-B', '/tmp/work/kvmem/backends/ninfer/build-sm75', '-G', 'Ninja', '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_CUDA_ARCHITECTURES=75', '-DNINFER_BUILD_APPS=ON']\n"}
+,{"stream_name":"stdout","time":120.840061264,"data":"-- The C compiler identification is GNU 13.3.0\n"}
+,{"stream_name":"stdout","time":120.840066818,"data":"-- The CXX compiler identification is GNU 13.3.0\n"}
+,{"stream_name":"stdout","time":120.840071276,"data":"-- The CUDA compiler identification is NVIDIA 13.0.88 with host compiler GNU 13.3.0\n"}
+,{"stream_name":"stdout","time":120.840075798,"data":"-- Detecting C compiler ABI info\n"}
+,{"stream_name":"stdout","time":120.840080188,"data":"-- Detecting C compiler ABI info - done\n"}
+,{"stream_name":"stdout","time":120.840084517,"data":"-- Check for working C compiler: /usr/bin/cc - skipped\n"}
+,{"stream_name":"stdout","time":120.840089302,"data":"-- Detecting C compile features\n"}
+,{"stream_name":"stdout","time":120.840093904,"data":"-- Detecting C compile features - done\n"}
+,{"stream_name":"stdout","time":120.840098002,"data":"-- Detecting CXX compiler ABI info\n"}
+,{"stream_name":"stdout","time":120.84010227,"data":"-- Detecting CXX compiler ABI info - done\n"}
+,{"stream_name":"stdout","time":120.840106653,"data":"-- Check for working CXX compiler: /usr/bin/c++ - skipped\n"}
+,{"stream_name":"stdout","time":120.840111217,"data":"-- Detecting CXX compile features\n"}
+,{"stream_name":"stdout","time":120.840115565,"data":"-- Detecting CXX compile features - done\n"}
+,{"stream_name":"stdout","time":120.840119875,"data":"-- Detecting CUDA compiler ABI info\n"}
+,{"stream_name":"stdout","time":120.840134162,"data":"-- Detecting CUDA compiler ABI info - done\n"}
+,{"stream_name":"stdout","time":120.840137931,"data":"-- Check for working CUDA compiler: /usr/local/cuda/bin/nvcc - skipped\n"}
+,{"stream_name":"stdout","time":120.840141284,"data":"-- Detecting CUDA compile features\n"}
+,{"stream_name":"stdout","time":120.840144822,"data":"-- Detecting CUDA compile features - done\n"}
+,{"stream_name":"stdout","time":120.840148247,"data":"-- Found CUDAToolkit: /usr/local/cuda/targets/x86_64-linux/include;/usr/local/cuda/targets/x86_64-linux/include/cccl (found version \"13.0.88\")\n"}
+,{"stream_name":"stdout","time":120.840152023,"data":"-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n"}
+,{"stream_name":"stdout","time":120.84015532,"data":"-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n"}
+,{"stream_name":"stdout","time":120.840158798,"data":"-- Found Threads: TRUE\n"}
+,{"stream_name":"stdout","time":120.840162487,"data":"-- Found PkgConfig: /usr/bin/pkg-config (found version \"1.8.1\")\n"}
+,{"stream_name":"stdout","time":120.840166211,"data":"-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version \"1.3\")\n"}
+,{"stream_name":"stdout","time":120.840169728,"data":"-- Configuring incomplete, errors occurred!\n"}
+,{"stream_name":"stdout","time":120.840172786,"data":"CMake Error at cmake/NinferFFmpeg.cmake:38 (find_program):\n"}
+,{"stream_name":"stdout","time":120.840175869,"data":"  Could not find NINFER_MESON using the following names: meson\n"}
+,{"stream_name":"stdout","time":120.840201814,"data":"Call Stack (most recent call first):\n"}
+,{"stream_name":"stdout","time":120.840207006,"data":"  cmake/Dependencies.cmake:44 (include)\n"}
+,{"stream_name":"stdout","time":120.840211037,"data":"  CMakeLists.txt:303 (include)\n"}
+,{"stream_name":"stdout","time":120.840214824,"data":"\n"}
+,{"stream_name":"stdout","time":120.840218312,"data":"\n"}
+,{"stream_name":"stdout","time":120.840221732,"data":"\n"}
+,{"stream_name":"stdout","time":120.840225402,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":120.84022901,"data":"  File \"/kaggle/src/script.py\", line 70, in run\n"}
+,{"stream_name":"stdout","time":120.840232161,"data":"    out = fn(*a, **k)\n"}
+,{"stream_name":"stdout","time":120.840235607,"data":"  File \"/kaggle/src/script.py\", line 275, in configure\n"}
+,{"stream_name":"stdout","time":120.840239199,"data":"    rc, tail = sh(cmake_args, timeout=1800)\n"}
+,{"stream_name":"stdout","time":120.840242306,"data":"               ~~^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":120.840245527,"data":"  File \"/kaggle/src/script.py\", line 95, in sh\n"}
+,{"stream_name":"stdout","time":120.840250042,"data":"    raise RuntimeError(f\"command failed rc={r.returncode}: {cmd}\\n{tail}\")\n"}
+,{"stream_name":"stdout","time":120.840253501,"data":"RuntimeError: command failed rc=1: ['cmake', '-S', '/tmp/work/kvmem/backends/ninfer', '-B', '/tmp/work/kvmem/backends/ninfer/build-sm75', '-G', 'Ninja', '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_CUDA_ARCHITECTURES=75', '-DNINFER_BUILD_APPS=ON']\n"}
+,{"stream_name":"stdout","time":120.840257238,"data":"-- The C compiler identification is GNU 13.3.0\n"}
+,{"stream_name":"stdout","time":120.840260651,"data":"-- The CXX compiler identification is GNU 13.3.0\n"}
+,{"stream_name":"stdout","time":120.840264067,"data":"-- The CUDA compiler identification is NVIDIA 13.0.88 with host compiler GNU 13.3.0\n"}
+,{"stream_name":"stdout","time":120.840267337,"data":"-- Detecting C compiler ABI info\n"}
+,{"stream_name":"stdout","time":120.840270654,"data":"-- Detecting C compiler ABI info - done\n"}
+,{"stream_name":"stdout","time":120.840274084,"data":"-- Check for working C compiler: /usr/bin/cc - skipped\n"}
+,{"stream_name":"stdout","time":120.840281144,"data":"-- Detecting C compile features\n"}
+,{"stream_name":"stdout","time":120.840284375,"data":"-- Detecting C compile features - done\n"}
+,{"stream_name":"stdout","time":120.840287631,"data":"-- Detecting CXX compiler ABI info\n"}
+,{"stream_name":"stdout","time":120.840290986,"data":"-- Detecting CXX compiler ABI info - done\n"}
+,{"stream_name":"stdout","time":120.840294239,"data":"-- Check for working CXX compiler: /usr/bin/c++ - skipped\n"}
+,{"stream_name":"stdout","time":120.84029792,"data":"-- Detecting CXX compile features\n"}
+,{"stream_name":"stdout","time":120.840301501,"data":"-- Detecting CXX compile features - done\n"}
+,{"stream_name":"stdout","time":120.840304809,"data":"-- Detecting CUDA compiler ABI info\n"}
+,{"stream_name":"stdout","time":120.840307954,"data":"-- Detecting CUDA compiler ABI info - done\n"}
+,{"stream_name":"stdout","time":120.840311319,"data":"-- Check for working CUDA compiler: /usr/local/cuda/bin/nvcc - skipped\n"}
+,{"stream_name":"stdout","time":120.840314527,"data":"-- Detecting CUDA compile features\n"}
+,{"stream_name":"stdout","time":120.840317634,"data":"-- Detecting CUDA compile features - done\n"}
+,{"stream_name":"stdout","time":120.840320781,"data":"-- Found CUDAToolkit: /usr/local/cuda/targets/x86_64-linux/include;/usr/local/cuda/targets/x86_64-linux/include/cccl (found version \"13.0.88\")\n"}
+,{"stream_name":"stdout","time":120.840324305,"data":"-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n"}
+,{"stream_name":"stdout","time":120.840327479,"data":"-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n"}
+,{"stream_name":"stdout","time":120.840330568,"data":"-- Found Threads: TRUE\n"}
+,{"stream_name":"stdout","time":120.840333656,"data":"-- Found PkgConfig: /usr/bin/pkg-config (found version \"1.8.1\")\n"}
+,{"stream_name":"stdout","time":120.840337341,"data":"-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version \"1.3\")\n"}
+,{"stream_name":"stdout","time":120.840340836,"data":"-- Configuring incomplete, errors occurred!\n"}
+,{"stream_name":"stdout","time":120.840343916,"data":"CMake Error at cmake/NinferFFmpeg.cmake:38 (find_program):\n"}
+,{"stream_name":"stdout","time":120.840347224,"data":"  Could not find NINFER_MESON using the following names: meson\n"}
+,{"stream_name":"stdout","time":120.840350798,"data":"Call Stack (most recent call first):\n"}
+,{"stream_name":"stdout","time":120.840353863,"data":"  cmake/Dependencies.cmake:44 (include)\n"}
+,{"stream_name":"stdout","time":120.840357486,"data":"  CMakeLists.txt:303 (include)\n"}
+,{"stream_name":"stdout","time":120.840361214,"data":"\n"}
+,{"stream_name":"stdout","time":120.840364377,"data":"\n"}
+,{"stream_name":"stdout","time":120.840367409,"data":"\n"}
+,{"stream_name":"stdout","time":120.840370731,"data":"\n"}
+,{"stream_name":"stderr","time":120.840779609,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":120.841267529,"data":"  File \"/kaggle/src/script.py\", line 348, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":120.841278379,"data":"    main()\n"}
+,{"stream_name":"stderr","time":120.841282259,"data":"    ~~~~^^\n"}
+,{"stream_name":"stderr","time":120.841285579,"data":"  File \"/kaggle/src/script.py\", line 335, in main\n"}
+,{"stream_name":"stderr","time":120.841289521,"data":"    cfg = configure(tree)\n"}
+,{"stream_name":"stderr","time":120.841293252,"data":"  File \"/kaggle/src/script.py\", line 70, in run\n"}
+,{"stream_name":"stderr","time":120.841296638,"data":"    out = fn(*a, **k)\n"}
+,{"stream_name":"stderr","time":120.841300251,"data":"  File \"/kaggle/src/script.py\", line 275, in configure\n"}
+,{"stream_name":"stderr","time":120.841311841,"data":"    rc, tail = sh(cmake_args, timeout=1800)\n"}
+,{"stream_name":"stderr","time":120.8413157,"data":"               ~~^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":120.841319494,"data":"  File \"/kaggle/src/script.py\", line 95, in sh\n"}
+,{"stream_name":"stderr","time":120.841323189,"data":"    raise RuntimeError(f\"command failed rc={r.returncode}: {cmd}\\n{tail}\")\n"}
+,{"stream_name":"stderr","time":120.841327072,"data":"RuntimeError: command failed rc=1: ['cmake', '-S', '/tmp/work/kvmem/backends/ninfer', '-B', '/tmp/work/kvmem/backends/ninfer/build-sm75', '-G', 'Ninja', '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_CUDA_ARCHITECTURES=75', '-DNINFER_BUILD_APPS=ON']\n"}
+,{"stream_name":"stderr","time":120.841331184,"data":"-- The C compiler identification is GNU 13.3.0\n"}
+,{"stream_name":"stderr","time":120.841334717,"data":"-- The CXX compiler identification is GNU 13.3.0\n"}
+,{"stream_name":"stderr","time":120.841338116,"data":"-- The CUDA compiler identification is NVIDIA 13.0.88 with host compiler GNU 13.3.0\n"}
+,{"stream_name":"stderr","time":120.841342014,"data":"-- Detecting C compiler ABI info\n"}
+,{"stream_name":"stderr","time":120.841345104,"data":"-- Detecting C compiler ABI info - done\n"}
+,{"stream_name":"stderr","time":120.841348602,"data":"-- Check for working C compiler: /usr/bin/cc - skipped\n"}
+,{"stream_name":"stderr","time":120.841351937,"data":"-- Detecting C compile features\n"}
+,{"stream_name":"stderr","time":120.841355231,"data":"-- Detecting C compile features - done\n"}
+,{"stream_name":"stderr","time":120.841358349,"data":"-- Detecting CXX compiler ABI info\n"}
+,{"stream_name":"stderr","time":120.841361964,"data":"-- Detecting CXX compiler ABI info - done\n"}
+,{"stream_name":"stderr","time":120.841365152,"data":"-- Check for working CXX compiler: /usr/bin/c++ - skipped\n"}
+,{"stream_name":"stderr","time":120.841368511,"data":"-- Detecting CXX compile features\n"}
+,{"stream_name":"stderr","time":120.841372039,"data":"-- Detecting CXX compile features - done\n"}
+,{"stream_name":"stderr","time":120.841375408,"data":"-- Detecting CUDA compiler ABI info\n"}
+,{"stream_name":"stderr","time":120.841378881,"data":"-- Detecting CUDA compiler ABI info - done\n"}
+,{"stream_name":"stderr","time":120.841382437,"data":"-- Check for working CUDA compiler: /usr/local/cuda/bin/nvcc - skipped\n"}
+,{"stream_name":"stderr","time":120.841386272,"data":"-- Detecting CUDA compile features\n"}
+,{"stream_name":"stderr","time":120.841389892,"data":"-- Detecting CUDA compile features - done\n"}
+,{"stream_name":"stderr","time":120.841393474,"data":"-- Found CUDAToolkit: /usr/local/cuda/targets/x86_64-linux/include;/usr/local/cuda/targets/x86_64-linux/include/cccl (found version \"13.0.88\")\n"}
+,{"stream_name":"stderr","time":120.841397465,"data":"-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n"}
+,{"stream_name":"stderr","time":120.841401016,"data":"-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n"}
+,{"stream_name":"stderr","time":120.841404854,"data":"-- Found Threads: TRUE\n"}
+,{"stream_name":"stderr","time":120.841408327,"data":"-- Found PkgConfig: /usr/bin/pkg-config (found version \"1.8.1\")\n"}
+,{"stream_name":"stderr","time":120.841411735,"data":"-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version \"1.3\")\n"}
+,{"stream_name":"stderr","time":120.841415304,"data":"-- Configuring incomplete, errors occurred!\n"}
+,{"stream_name":"stderr","time":120.841418998,"data":"CMake Error at cmake/NinferFFmpeg.cmake:38 (find_program):\n"}
+,{"stream_name":"stderr","time":120.841423054,"data":"  Could not find NINFER_MESON using the following names: meson\n"}
+,{"stream_name":"stderr","time":120.841430124,"data":"Call Stack (most recent call first):\n"}
+,{"stream_name":"stderr","time":120.841434025,"data":"  cmake/Dependencies.cmake:44 (include)\n"}
+,{"stream_name":"stderr","time":120.841437552,"data":"  CMakeLists.txt:303 (include)\n"}
+,{"stream_name":"stderr","time":120.841440952,"data":"\n"}
+,{"stream_name":"stderr","time":120.841444677,"data":"\n"}
+,{"stream_name":"stderr","time":120.841468542,"data":"\n"}
+,{"stream_name":"stderr","time":123.090376387,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":123.090417952,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":123.411697175,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":123.41172220199999,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":125.058712599,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":126.067393308,"data":"[NbConvertApp] Writing 342094 bytes to __results__.html\n"}
+]

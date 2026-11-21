@@ -1,0 +1,21 @@
+{
+  "stages": {
+    "extract_kvmem": {
+      "ok": true,
+      "seconds": 12.5,
+      "detail": {
+        "tree": "/tmp/work/scripts",
+        "version": "?"
+      }
+    },
+    "prepare_ninfer": {
+      "ok": false,
+      "seconds": 3.5,
+      "error": "RuntimeError: command failed rc=2: ['/usr/bin/python3', 'scripts/prepare-backends.py', '--backend', 'ninfer']\n/usr/bin/python3: can't open file '/tmp/work/scripts/scripts/prepare-backends.py': [Errno 2] No such file or directory\n",
+      "trace": "Traceback (most recent call last):\n  File \"/kaggle/src/script.py\", line 70, in run\n    out = fn(*a, **k)\n  File \"/kaggle/src/script.py\", line 210, in prepare_ninfer\n    rc, tail = sh([sys.executable, \"scripts/prepare-backends.py\", \"--backend\", \"ninfer\"], cwd=tree)\n               ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/kaggle/src/script.py\", line 95, in sh\n    raise RuntimeError(f\"command failed rc={r.returncode}: {cmd}\\n{tail}\")\nRuntimeError: command failed rc=2: ['/usr/bin/python3', 'scripts/prepare-backends.py', '--backend', 'ninfer']\n/usr/bin/python3: can't open file '/tmp/work/scripts/scripts/prepare-backends.py': [Errno 2] No such file or directory\n\n"
+    }
+  },
+  "ok": false,
+  "arch": "75",
+  "t0": "2026-11-15T05:35:04Z"
+}

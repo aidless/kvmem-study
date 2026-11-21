@@ -1,0 +1,16 @@
+{
+  "id": "<kaggle-user>/kvmem-matrix-sm75",
+  "title": "kvmem-matrix-sm75",
+  "code_file": "matrix_kernel.py",
+  "language": "python",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "<kaggle-user>/kvmem-src"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "kernel_type": "script"
+}

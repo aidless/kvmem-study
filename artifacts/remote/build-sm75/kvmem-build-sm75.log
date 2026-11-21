@@ -1,0 +1,52 @@
+[{"stream_name":"stdout","time":1.067779188,"data":"=== STAGE extract_kvmem start\n"}
+,{"stream_name":"stdout","time":13.523437177,"data":"kvmem tree: /tmp/work/scripts VERSION=?\n"}
+,{"stream_name":"stdout","time":13.523467177,"data":"=== STAGE extract_kvmem OK {'ok': True, 'seconds': 12.5, 'detail': {'tree': '/tmp/work/scripts', 'version': '?'}}\n"}
+,{"stream_name":"stdout","time":13.523471918,"data":"=== STAGE prepare_ninfer start\n"}
+,{"stream_name":"stdout","time":13.523714515,"data":"+ git init /tmp/work/scripts/backends/ninfer\n"}
+,{"stream_name":"stdout","time":13.59890052,"data":"+ git -C /tmp/work/scripts/backends/ninfer remote add origin https://github.com/iamwavecut/ninfer-all.git\n"}
+,{"stream_name":"stdout","time":13.605266354,"data":"+ git -C /tmp/work/scripts/backends/ninfer fetch --depth 1 origin 6cc1f9fa438b7094685ae417dfa40e1ca324e617\n"}
+,{"stream_name":"stdout","time":16.370745587,"data":"+ git -C /tmp/work/scripts/backends/ninfer checkout --detach 6cc1f9fa438b7094685ae417dfa40e1ca324e617\n"}
+,{"stream_name":"stdout","time":16.892060759,"data":"+ git -C /tmp/work/scripts/backends/ninfer rev-parse HEAD\n"}
+,{"stream_name":"stdout","time":16.894391312,"data":"+ git -C /tmp/work/scripts init\n"}
+,{"stream_name":"stdout","time":16.898260642,"data":"+ git -C /tmp/work/scripts add -A\n"}
+,{"stream_name":"stdout","time":16.956493578,"data":"+ git -C /tmp/work/scripts commit -m kvmem snapshot\n"}
+,{"stream_name":"stdout","time":16.97548819,"data":"+ /usr/bin/python3 scripts/prepare-backends.py --backend ninfer\n"}
+,{"stream_name":"stdout","time":17.044206243,"data":"=== STAGE prepare_ninfer FAIL: command failed rc=2: ['/usr/bin/python3', 'scripts/prepare-backends.py', '--backend', 'ninfer']\n"}
+,{"stream_name":"stdout","time":17.044230993,"data":"/usr/bin/python3: can't open file '/tmp/work/scripts/scripts/prepare-backends.py': [Errno 2] No such file or directory\n"}
+,{"stream_name":"stdout","time":17.044235457,"data":"\n"}
+,{"stream_name":"stdout","time":17.044238867,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":17.044243802,"data":"  File \"/kaggle/src/script.py\", line 70, in run\n"}
+,{"stream_name":"stdout","time":17.044251117,"data":"    out = fn(*a, **k)\n"}
+,{"stream_name":"stdout","time":17.044253432,"data":"  File \"/kaggle/src/script.py\", line 210, in prepare_ninfer\n"}
+,{"stream_name":"stdout","time":17.044255888,"data":"    rc, tail = sh([sys.executable, \"scripts/prepare-backends.py\", \"--backend\", \"ninfer\"], cwd=tree)\n"}
+,{"stream_name":"stdout","time":17.044258553,"data":"               ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":17.044261095,"data":"  File \"/kaggle/src/script.py\", line 95, in sh\n"}
+,{"stream_name":"stdout","time":17.044263421,"data":"    raise RuntimeError(f\"command failed rc={r.returncode}: {cmd}\\n{tail}\")\n"}
+,{"stream_name":"stdout","time":17.044265872,"data":"RuntimeError: command failed rc=2: ['/usr/bin/python3', 'scripts/prepare-backends.py', '--backend', 'ninfer']\n"}
+,{"stream_name":"stdout","time":17.044268208,"data":"/usr/bin/python3: can't open file '/tmp/work/scripts/scripts/prepare-backends.py': [Errno 2] No such file or directory\n"}
+,{"stream_name":"stdout","time":17.044270647,"data":"\n"}
+,{"stream_name":"stdout","time":17.044272727,"data":"\n"}
+,{"stream_name":"stderr","time":17.044715105,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":17.045276807,"data":"  File \"/kaggle/src/script.py\", line 309, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":17.045289939,"data":"    main()\n"}
+,{"stream_name":"stderr","time":17.045293676,"data":"    ~~~~^^\n"}
+,{"stream_name":"stderr","time":17.045312405,"data":"  File \"/kaggle/src/script.py\", line 293, in main\n"}
+,{"stream_name":"stderr","time":17.045315325,"data":"    prepare_ninfer(tree)\n"}
+,{"stream_name":"stderr","time":17.045317601,"data":"    ~~~~~~~~~~~~~~^^^^^^\n"}
+,{"stream_name":"stderr","time":17.0453198,"data":"  File \"/kaggle/src/script.py\", line 70, in run\n"}
+,{"stream_name":"stderr","time":17.045322091,"data":"    out = fn(*a, **k)\n"}
+,{"stream_name":"stderr","time":17.045324299,"data":"  File \"/kaggle/src/script.py\", line 210, in prepare_ninfer\n"}
+,{"stream_name":"stderr","time":17.045326964,"data":"    rc, tail = sh([sys.executable, \"scripts/prepare-backends.py\", \"--backend\", \"ninfer\"], cwd=tree)\n"}
+,{"stream_name":"stderr","time":17.045343445,"data":"               ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":17.04534748,"data":"  File \"/kaggle/src/script.py\", line 95, in sh\n"}
+,{"stream_name":"stderr","time":17.045363073,"data":"    raise RuntimeError(f\"command failed rc={r.returncode}: {cmd}\\n{tail}\")\n"}
+,{"stream_name":"stderr","time":17.045366849,"data":"RuntimeError: command failed rc=2: ['/usr/bin/python3', 'scripts/prepare-backends.py', '--backend', 'ninfer']\n"}
+,{"stream_name":"stderr","time":17.045370413,"data":"/usr/bin/python3: can't open file '/tmp/work/scripts/scripts/prepare-backends.py': [Errno 2] No such file or directory\n"}
+,{"stream_name":"stderr","time":17.045373929,"data":"\n"}
+,{"stream_name":"stderr","time":19.564955003,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":19.564992073,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":19.954129017,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":19.954156057,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":21.922781939,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":23.078332494,"data":"[NbConvertApp] Writing 337552 bytes to __results__.html\n"}
+]

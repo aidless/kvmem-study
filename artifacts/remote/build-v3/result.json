@@ -1,0 +1,64 @@
+{
+  "stages": {
+    "probe_toolchain": {
+      "ok": true,
+      "seconds": 0.6,
+      "detail": {
+        "nvidia_smi": "GPU 0: Tesla T4 (UUID: GPU-8e4979f3-7158-5ee4-56ef-9145edfdc106)",
+        "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver",
+        "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "cmake": "cmake version 3.31.10",
+        "ninja": "1.13.2.git.kitware.jobserver-pipe-1",
+        "disk_tmp": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         8.0T  7.1T  967G  89% /",
+        "mem": "total        used        free      shared  buff/cache   available\nMem:              31           1          26           0           4          30\nSwap:              0           0           0",
+        "cmake_resolved": "3.31.10",
+        "ninja_resolved": "1.13.2.git.kitware.jobserver-pipe-1"
+      }
+    },
+    "extract_kvmem": {
+      "ok": true,
+      "seconds": 63.3,
+      "detail": {
+        "tree": "/tmp/work/kvmem",
+        "source": "/kaggle/input/datasets/<kaggle-user>/kvmem-src/kvmem-master",
+        "version": "0.19.0",
+        "files": 1016
+      }
+    },
+    "prepare_ninfer": {
+      "ok": true,
+      "seconds": 49.8,
+      "detail": {
+        "head": "6cc1f9fa438b7094685ae417dfa40e1ca324e617",
+        "prepare_tail": "ninfer: 6cc1f9fa438b + 48 patches ready\n"
+      }
+    },
+    "fetch_media": {
+      "ok": true,
+      "seconds": 1.4,
+      "detail": {
+        "seconds": 1.4,
+        "dir": "/tmp/work/kvmem/backends/ninfer/third_party/media-sources",
+        "files": [
+          {
+            "name": "dav1d-1.5.4.tar.xz",
+            "bytes": 1038852
+          },
+          {
+            "name": "ffmpeg-9.0.2.tar.xz",
+            "bytes": 12040788
+          }
+        ]
+      }
+    },
+    "configure": {
+      "ok": false,
+      "seconds": 5.0,
+      "error": "RuntimeError: command failed rc=1: ['cmake', '-S', '/tmp/work/kvmem/backends/ninfer', '-B', '/tmp/work/kvmem/backends/ninfer/build-sm75', '-G', 'Ninja', '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_CUDA_ARCHITECTURES=75', '-DNINFER_BUILD_APPS=ON']\n-- The C compiler identification is GNU 13.3.0\n-- The CXX compiler identification is GNU 13.3.0\n-- The CUDA compiler identification is NVIDIA 13.0.88 with host compiler GNU 13.3.0\n-- Detecting C compiler ABI info\n-- Detecting C compiler ABI info - done\n-- Check for working C compiler: /usr/bin/cc - skipped\n-- Detecting C compile features\n-- Detecting C compile features - done\n-- Detecting CXX compiler ABI info\n-- Detecting CXX compiler ABI info - done\n-- Check for working CXX compiler: /usr/bin/c++ - skipped\n-- Detecting CXX compile features\n-- Detecting CXX compile features - done\n-- Detecting CUDA compiler ABI info\n-- Detecting CUDA compiler ABI info - done\n-- Check for working CUDA compiler: /usr/local/cuda/bin/nvcc - skipped\n-- Detecting CUDA compile features\n-- Detecting CUDA compile features - done\n-- Found CUDAToolkit: /usr/local/cuda/targets/x86_64-linux/include;/usr/local/cuda/targets/x86_64-linux/include/cccl (found version \"13.0.88\")\n-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n-- Found Threads: TRUE\n-- Found PkgConfig: /usr/bin/pkg-config (found version \"1.8.1\")\n-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version \"1.3\")\n-- Configuring incomplete, errors occurred!\nCMake Error at cmake/NinferFFmpeg.cmake:38 (find_program):\n  Could not find NINFER_MESON using the following names: meson\nCall Stack (most recent call first):\n  cmake/Dependencies.cmake:44 (include)\n  CMakeLists.txt:303 (include)\n\n\n",
+      "trace": "Traceback (most recent call last):\n  File \"/kaggle/src/script.py\", line 70, in run\n    out = fn(*a, **k)\n  File \"/kaggle/src/script.py\", line 275, in configure\n    rc, tail = sh(cmake_args, timeout=1800)\n               ~~^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/kaggle/src/script.py\", line 95, in sh\n    raise RuntimeError(f\"command failed rc={r.returncode}: {cmd}\\n{tail}\")\nRuntimeError: command failed rc=1: ['cmake', '-S', '/tmp/work/kvmem/backends/ninfer', '-B', '/tmp/work/kvmem/backends/ninfer/build-sm75', '-G', 'Ninja', '-DCMAKE_BUILD_TYPE=Release', '-DCMAKE_CUDA_ARCHITECTURES=75', '-DNINFER_BUILD_APPS=ON']\n-- The C compiler identification is GNU 13.3.0\n-- The CXX compiler identification is GNU 13.3.0\n-- The CUDA compiler identification is NVIDIA 13.0.88 with host compiler GNU 13.3.0\n-- Detecting C compiler ABI info\n-- Detecting C compiler ABI info - done\n-- Check for working C compiler: /usr/bin/cc - skipped\n-- Detecting C compile features\n-- Detecting C compile features - done\n-- Detecting CXX compiler ABI info\n-- Detecting CXX compiler ABI info - done\n-- Check for working CXX compiler: /usr/bin/c++ - skipped\n-- Detecting CXX compile features\n-- Detecting CXX compile features - done\n-- Detecting CUDA compiler ABI info\n-- Detecting CUDA compiler ABI info - done\n-- Check for working CUDA compiler: /usr/local/cuda/bin/nvcc - skipped\n-- Detecting CUDA compile features\n-- Detecting CUDA compile features - done\n-- Found CUDAToolkit: /usr/local/cuda/targets/x86_64-linux/include;/usr/local/cuda/targets/x86_64-linux/include/cccl (found version \"13.0.88\")\n-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n-- Found Threads: TRUE\n-- Found PkgConfig: /usr/bin/pkg-config (found version \"1.8.1\")\n-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version \"1.3\")\n-- Configuring incomplete, errors occurred!\nCMake Error at cmake/NinferFFmpeg.cmake:38 (find_program):\n  Could not find NINFER_MESON using the following names: meson\nCall Stack (most recent call first):\n  cmake/Dependencies.cmake:44 (include)\n  CMakeLists.txt:303 (include)\n\n\n\n"
+    }
+  },
+  "ok": false,
+  "arch": "75",
+  "t0": "2026-11-15T05:49:13Z"
+}

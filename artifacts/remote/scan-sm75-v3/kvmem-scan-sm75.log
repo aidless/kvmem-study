@@ -1,0 +1,132 @@
+[{"stream_name":"stdout","time":1.373101084,"data":"=== STAGE probe_toolchain start\n"}
+,{"stream_name":"stdout","time":1.373154419,"data":"+ nvidia-smi -L\n"}
+,{"stream_name":"stdout","time":1.410597437,"data":"+ nvcc --version\n"}
+,{"stream_name":"stdout","time":1.440182727,"data":"+ gcc --version\n"}
+,{"stream_name":"stdout","time":1.496148551,"data":"+ cmake --version\n"}
+,{"stream_name":"stdout","time":1.924964663,"data":"+ ninja --version\n"}
+,{"stream_name":"stdout","time":1.931911016,"data":"+ free -g\n"}
+,{"stream_name":"stdout","time":1.969200264,"data":"+ df -h /tmp\n"}
+,{"stream_name":"stdout","time":1.9740496699999999,"data":"+ ninja --version\n"}
+,{"stream_name":"stdout","time":1.978083209,"data":"{\n"}
+,{"stream_name":"stdout","time":1.978103098,"data":"  \"nvidia_smi\": \"GPU 0: Tesla T4 (UUID: GPU-7f2ab08b-dfb9-9bf8-6fde-16c6dfc6c389)\",\n"}
+,{"stream_name":"stdout","time":1.9781095469999999,"data":"  \"nvcc\": \"nvcc: NVIDIA (R) Cuda compiler driver\",\n"}
+,{"stream_name":"stdout","time":1.978115184,"data":"  \"gcc\": \"gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\",\n"}
+,{"stream_name":"stdout","time":1.978120706,"data":"  \"cmake\": \"cmake version 3.31.10\",\n"}
+,{"stream_name":"stdout","time":1.978125889,"data":"  \"ninja\": \"1.13.2.git.kitware.jobserver-pipe-1\",\n"}
+,{"stream_name":"stdout","time":1.978131294,"data":"  \"mem\": \"total        used        free      shared  buff/cache   available\\nMem:              31           1          26           0           4          30\\nSwap:              0           0           0\",\n"}
+,{"stream_name":"stdout","time":1.9781456,"data":"  \"disk_tmp\": \"Filesystem      Size  Used Avail Use% Mounted on\\noverlay         8.0T  7.1T  967G  89% /\"\n"}
+,{"stream_name":"stdout","time":1.978151547,"data":"}\n"}
+,{"stream_name":"stdout","time":1.9781563260000001,"data":"=== STAGE probe_toolchain OK 0.6s\n"}
+,{"stream_name":"stdout","time":1.9785380940000001,"data":"=== STAGE ensure_media_tools start\n"}
+,{"stream_name":"stdout","time":1.978553585,"data":"+ which meson\n"}
+,{"stream_name":"stdout","time":1.9907294009999998,"data":"+ which ninja\n"}
+,{"stream_name":"stdout","time":1.992118243,"data":"+ which make\n"}
+,{"stream_name":"stdout","time":1.9935258710000001,"data":"+ which nasm\n"}
+,{"stream_name":"stdout","time":1.994924166,"data":"+ which pkg-config\n"}
+,{"stream_name":"stdout","time":1.9962881129999999,"data":"+ /usr/bin/python3 -m pip install -q meson\n"}
+,{"stream_name":"stdout","time":8.073188366,"data":"+ apt-get update -qq\n"}
+,{"stream_name":"stdout","time":12.193214693,"data":"+ apt-get install -y -qq nasm\n"}
+,{"stream_name":"stdout","time":19.508297684,"data":"+ which meson\n"}
+,{"stream_name":"stdout","time":19.509680546,"data":"+ which ninja\n"}
+,{"stream_name":"stdout","time":19.510897439,"data":"+ which make\n"}
+,{"stream_name":"stdout","time":19.512124063,"data":"+ which nasm\n"}
+,{"stream_name":"stdout","time":19.513365497,"data":"=== STAGE ensure_media_tools OK 17.5s\n"}
+,{"stream_name":"stdout","time":19.513675986,"data":"=== STAGE cuda_driver start\n"}
+,{"stream_name":"stdout","time":19.517574457,"data":"{\n"}
+,{"stream_name":"stdout","time":19.517588875,"data":"  \"dirs\": {\n"}
+,{"stream_name":"stdout","time":19.517594391,"data":"    \"/usr/local/nvidia/lib64\": [\n"}
+,{"stream_name":"stdout","time":19.517598074,"data":"      \"libcuda.so\",\n"}
+,{"stream_name":"stdout","time":19.517601477,"data":"      \"libcuda.so.1\",\n"}
+,{"stream_name":"stdout","time":19.51760489,"data":"      \"libcuda.so.580.178.04\"\n"}
+,{"stream_name":"stdout","time":19.517608406,"data":"    ],\n"}
+,{"stream_name":"stdout","time":19.517625039,"data":"    \"/usr/local/nvidia/lib\": null,\n"}
+,{"stream_name":"stdout","time":19.517627916,"data":"    \"/usr/local/cuda/lib64\": [],\n"}
+,{"stream_name":"stdout","time":19.517643246,"data":"    \"/usr/local/cuda/lib\": null,\n"}
+,{"stream_name":"stdout","time":19.517647198,"data":"    \"/usr/local/cuda/lib64/stubs\": [],\n"}
+,{"stream_name":"stdout","time":19.517650919,"data":"    \"/usr/local/cuda/lib/stubs\": null,\n"}
+,{"stream_name":"stdout","time":19.517654702,"data":"    \"/usr/local/cuda/targets/x86_64-linux/lib\": [],\n"}
+,{"stream_name":"stdout","time":19.517658976,"data":"    \"/usr/local/cuda/targets/x86_64-linux/lib/stubs\": [],\n"}
+,{"stream_name":"stdout","time":19.517663044,"data":"    \"/usr/lib/x86_64-linux-gnu\": [],\n"}
+,{"stream_name":"stdout","time":19.517666887,"data":"    \"/usr/lib64\": [],\n"}
+,{"stream_name":"stdout","time":19.517670633,"data":"    \"/usr/lib\": [],\n"}
+,{"stream_name":"stdout","time":19.517674205,"data":"    \"/opt/conda/lib\": null,\n"}
+,{"stream_name":"stdout","time":19.517677557,"data":"    \"/usr/local/lib\": []\n"}
+,{"stream_name":"stdout","time":19.517681203,"data":"  },\n"}
+,{"stream_name":"stdout","time":19.517684916,"data":"  \"versioned\": [\n"}
+,{"stream_name":"stdout","time":19.517688468,"data":"    \"/usr/local/nvidia/lib64/libcuda.so.1\",\n"}
+,{"stream_name":"stdout","time":19.517692047,"data":"    \"/usr/local/nvidia/lib64/libcuda.so.580.178.04\"\n"}
+,{"stream_name":"stdout","time":19.517696161,"data":"  ],\n"}
+,{"stream_name":"stdout","time":19.517699657,"data":"  \"unversioned\": [\n"}
+,{"stream_name":"stdout","time":19.517703583,"data":"    \"/usr/local/nvidia/lib64/libcuda.so\"\n"}
+,{"stream_name":"stdout","time":19.517707634,"data":"  ]\n"}
+,{"stream_name":"stdout","time":19.51771093,"data":"}\n"}
+,{"stream_name":"stdout","time":19.517717367,"data":"libcuda=/usr/local/nvidia/lib64/libcuda.so link_dir=/usr/local/nvidia/lib64 shim=/tmp/work/cuda-driver-shim.cmake\n"}
+,{"stream_name":"stdout","time":19.517721671,"data":"=== STAGE cuda_driver OK 0.0s\n"}
+,{"stream_name":"stdout","time":19.518017763,"data":"=== STAGE extract_kvmem start\n"}
+,{"stream_name":"stdout","time":86.4515473,"data":"=== STAGE extract_kvmem OK 66.9s\n"}
+,{"stream_name":"stdout","time":86.452094747,"data":"=== STAGE prepare_ninfer start\n"}
+,{"stream_name":"stdout","time":86.452279471,"data":"+ git init /tmp/work/kvmem/backends/ninfer\n"}
+,{"stream_name":"stdout","time":86.502165342,"data":"+ git -C /tmp/work/kvmem/backends/ninfer remote add origin https://github.com/iamwavecut/ninfer-all.git\n"}
+,{"stream_name":"stdout","time":86.508042429,"data":"+ git -C /tmp/work/kvmem/backends/ninfer fetch --depth 1 origin 6cc1f9fa438b7094685ae417dfa40e1ca324e617\n"}
+,{"stream_name":"stdout","time":89.029701168,"data":"+ git -C /tmp/work/kvmem/backends/ninfer checkout --detach 6cc1f9fa438b7094685ae417dfa40e1ca324e617\n"}
+,{"stream_name":"stdout","time":89.547898025,"data":"+ git -C /tmp/work/kvmem/backends/ninfer rev-parse HEAD\n"}
+,{"stream_name":"stdout","time":89.550265179,"data":"+ git -C /tmp/work/kvmem init\n"}
+,{"stream_name":"stdout","time":89.554027374,"data":"+ git -C /tmp/work/kvmem add -A\n"}
+,{"stream_name":"stdout","time":90.318323384,"data":"+ git -C /tmp/work/kvmem commit -m kvmem snapshot\n"}
+,{"stream_name":"stdout","time":90.443825635,"data":"+ /usr/bin/python3 scripts/prepare-backends.py --backend ninfer\n"}
+,{"stream_name":"stdout","time":136.174054591,"data":"=== STAGE prepare_ninfer OK 49.7s\n"}
+,{"stream_name":"stdout","time":136.174429666,"data":"=== STAGE acquire_model start\n"}
+,{"stream_name":"stdout","time":137.334669471,"data":"no artifact mounted; converting from GGUF in this kernel\n"}
+,{"stream_name":"stdout","time":137.334693672,"data":"+ /usr/bin/python3 -m pip install -q gguf\n"}
+,{"stream_name":"stdout","time":139.564040971,"data":"+ /usr/bin/python3 -m tools.convert --source-gguf unsloth/Qwen3.5-4B-MTP-GGUF --revision 86835bf9949e4d14d6860f7910b1340ad4f271a9 --output /tmp/work/qwen3_5_4b_mtp.ninfer\n"}
+,{"stream_name":"stdout","time":139.63154991,"data":"=== STAGE acquire_model FAIL: command failed rc=1: ['/usr/bin/python3', '-m', 'tools.convert', '--source-gguf', 'unsloth/Qwen3.5-4B-MTP-GGUF', '--revision', '86835bf9949e4d14d6860f7910b1340ad4f271a9', '--output', '/tmp/work/qwen3_5_4b_mtp.ninfer']\n"}
+,{"stream_name":"stdout","time":139.631576833,"data":"/usr/bin/python3: No module named tools.convert\n"}
+,{"stream_name":"stdout","time":139.631581515,"data":"\n"}
+,{"stream_name":"stdout","time":139.631584905,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":139.631593558,"data":"  File \"/kaggle/src/script.py\", line 87, in run\n"}
+,{"stream_name":"stdout","time":139.631596183,"data":"    out = fn(*a, **k)\n"}
+,{"stream_name":"stdout","time":139.63159842,"data":"  File \"/kaggle/src/script.py\", line 226, in acquire_model\n"}
+,{"stream_name":"stdout","time":139.631600807,"data":"    sh([sys.executable, \"-m\", \"tools.convert\",\n"}
+,{"stream_name":"stdout","time":139.631603304,"data":"    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":139.631605532,"data":"        \"--source-gguf\", \"unsloth/Qwen3.5-4B-MTP-GGUF\",\n"}
+,{"stream_name":"stdout","time":139.631607902,"data":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":139.631610217,"data":"        \"--revision\", \"86835bf9949e4d14d6860f7910b1340ad4f271a9\",\n"}
+,{"stream_name":"stdout","time":139.631612649,"data":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":139.631614906,"data":"        \"--output\", dst], cwd=tree, timeout=7200)\n"}
+,{"stream_name":"stdout","time":139.631617176,"data":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":139.631619492,"data":"  File \"/kaggle/src/script.py\", line 115, in sh\n"}
+,{"stream_name":"stdout","time":139.631621782,"data":"    raise RuntimeError(f\"command failed rc={r.returncode}: {cmd}\\n{tail}\")\n"}
+,{"stream_name":"stdout","time":139.631624285,"data":"RuntimeError: command failed rc=1: ['/usr/bin/python3', '-m', 'tools.convert', '--source-gguf', 'unsloth/Qwen3.5-4B-MTP-GGUF', '--revision', '86835bf9949e4d14d6860f7910b1340ad4f271a9', '--output', '/tmp/work/qwen3_5_4b_mtp.ninfer']\n"}
+,{"stream_name":"stdout","time":139.631626856,"data":"/usr/bin/python3: No module named tools.convert\n"}
+,{"stream_name":"stdout","time":139.631629236,"data":"\n"}
+,{"stream_name":"stdout","time":139.631631344,"data":"\n"}
+,{"stream_name":"stderr","time":139.632536544,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":139.633291334,"data":"  File \"/kaggle/src/script.py\", line 663, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":139.633301346,"data":"    main()\n"}
+,{"stream_name":"stderr","time":139.633306276,"data":"    ~~~~^^\n"}
+,{"stream_name":"stderr","time":139.633310191,"data":"  File \"/kaggle/src/script.py\", line 642, in main\n"}
+,{"stream_name":"stderr","time":139.633314404,"data":"    model = acquire_model(tree)[\"path\"]\n"}
+,{"stream_name":"stderr","time":139.633319078,"data":"            ~~~~~~~~~~~~~^^^^^^\n"}
+,{"stream_name":"stderr","time":139.633323908,"data":"  File \"/kaggle/src/script.py\", line 87, in run\n"}
+,{"stream_name":"stderr","time":139.633340056,"data":"    out = fn(*a, **k)\n"}
+,{"stream_name":"stderr","time":139.633344522,"data":"  File \"/kaggle/src/script.py\", line 226, in acquire_model\n"}
+,{"stream_name":"stderr","time":139.633348699,"data":"    sh([sys.executable, \"-m\", \"tools.convert\",\n"}
+,{"stream_name":"stderr","time":139.633354633,"data":"    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":139.633362046,"data":"        \"--source-gguf\", \"unsloth/Qwen3.5-4B-MTP-GGUF\",\n"}
+,{"stream_name":"stderr","time":139.633364825,"data":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":139.633367469,"data":"        \"--revision\", \"86835bf9949e4d14d6860f7910b1340ad4f271a9\",\n"}
+,{"stream_name":"stderr","time":139.633370295,"data":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":139.633372997,"data":"        \"--output\", dst], cwd=tree, timeout=7200)\n"}
+,{"stream_name":"stderr","time":139.633375675,"data":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":139.633378256,"data":"  File \"/kaggle/src/script.py\", line 115, in sh\n"}
+,{"stream_name":"stderr","time":139.63338094,"data":"    raise RuntimeError(f\"command failed rc={r.returncode}: {cmd}\\n{tail}\")\n"}
+,{"stream_name":"stderr","time":139.633383998,"data":"RuntimeError: command failed rc=1: ['/usr/bin/python3', '-m', 'tools.convert', '--source-gguf', 'unsloth/Qwen3.5-4B-MTP-GGUF', '--revision', '86835bf9949e4d14d6860f7910b1340ad4f271a9', '--output', '/tmp/work/qwen3_5_4b_mtp.ninfer']\n"}
+,{"stream_name":"stderr","time":139.63342803,"data":"/usr/bin/python3: No module named tools.convert\n"}
+,{"stream_name":"stderr","time":139.633432893,"data":"\n"}
+,{"stream_name":"stderr","time":141.816622908,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":141.816654274,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":142.161267776,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":142.161293699,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":143.129036884,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":144.289482095,"data":"[NbConvertApp] Writing 406950 bytes to __results__.html\n"}
+]

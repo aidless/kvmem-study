@@ -1,0 +1,36 @@
+{
+  "stages": {
+    "probe_toolchain": {
+      "ok": true,
+      "seconds": 0.6,
+      "detail": {
+        "nvidia_smi": "GPU 0: Tesla T4 (UUID: GPU-deda8ebf-66cd-e9ad-15b0-b992e93192cb)",
+        "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver",
+        "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "cmake": "cmake version 3.31.10",
+        "ninja": "1.13.2.git.kitware.jobserver-pipe-1",
+        "mem": "total        used        free      shared  buff/cache   available\nMem:              31           1          26           0           4          30\nSwap:              0           0           0",
+        "disk_tmp": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         8.0T  7.1T  967G  89% /"
+      }
+    },
+    "ensure_media_tools": {
+      "ok": true,
+      "seconds": 36.2,
+      "detail": {
+        "meson": "/usr/local/bin/meson",
+        "ninja": "/usr/local/bin/ninja",
+        "make": "/usr/bin/make",
+        "nasm": "/usr/bin/nasm"
+      }
+    },
+    "cuda_driver": {
+      "ok": false,
+      "seconds": 0.0,
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: '/tmp/work/cuda-driver-shim.cmake'",
+      "trace": "Traceback (most recent call last):\n  File \"/kaggle/src/script.py\", line 87, in run\n    out = fn(*a, **k)\n  File \"/kaggle/src/script.py\", line 365, in ensure_cuda_driver\n    with open(shim, \"w\") as fh:\n         ~~~~^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/tmp/work/cuda-driver-shim.cmake'\n"
+    }
+  },
+  "ok": false,
+  "arch": "75",
+  "t0": "2026-11-17T15:32:21Z"
+}

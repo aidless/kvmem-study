@@ -1,0 +1,9 @@
+{
+ "nvidia_smi_L": "GPU 0: Tesla T4 (UUID: GPU-5115a9ed-9b7b-dcc3-719d-16f5eb966b36)\nGPU 1: Tesla T4 (UUID: GPU-8bf65088-6931-9378-f6a4-eb34efba7da5)\n",
+ "nvidia_smi_query": "name, memory.total [MiB], compute_cap, driver_version\nTesla T4, 15360 MiB, 7.5, 580.178.04\nTesla T4, 15360 MiB, 7.5, 580.178.04\n",
+ "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Wed_Aug_20_01:58:59_PM_PDT_2025\nCuda compilation tools, release 13.0, V13.0.88\nBuild cuda_13.0.r13.0/compiler.36424714_0\n",
+ "cuda_home": "/usr/local/cuda\n/usr/local/cuda-13\n/usr/local/cuda-13.0\n",
+ "cpu": "4\n",
+ "mem_gb": "               total        used        free      shared  buff/cache   available\nMem:              31           1          26           0           4          30\n",
+ "disk": "/dev/loop2       20G  104K   20G   1% /kaggle/working\n"
+}

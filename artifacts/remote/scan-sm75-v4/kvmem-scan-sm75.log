@@ -1,0 +1,216 @@
+[{"stream_name":"stdout","time":0.766962336,"data":"=== STAGE probe_toolchain start\n"}
+,{"stream_name":"stdout","time":0.76700353,"data":"+ nvidia-smi -L\n"}
+,{"stream_name":"stdout","time":0.809197065,"data":"+ nvcc --version\n"}
+,{"stream_name":"stdout","time":0.822645592,"data":"+ gcc --version\n"}
+,{"stream_name":"stdout","time":0.8465516,"data":"+ cmake --version\n"}
+,{"stream_name":"stdout","time":1.18250726,"data":"+ ninja --version\n"}
+,{"stream_name":"stdout","time":1.187734542,"data":"+ free -g\n"}
+,{"stream_name":"stdout","time":1.203205231,"data":"+ df -h /tmp\n"}
+,{"stream_name":"stdout","time":1.205915744,"data":"+ ninja --version\n"}
+,{"stream_name":"stdout","time":1.208302913,"data":"{\n"}
+,{"stream_name":"stdout","time":1.208316037,"data":"  \"nvidia_smi\": \"GPU 0: Tesla T4 (UUID: GPU-e194c54c-c24e-d1a9-d983-44347f7973ce)\",\n"}
+,{"stream_name":"stdout","time":1.208321453,"data":"  \"nvcc\": \"nvcc: NVIDIA (R) Cuda compiler driver\",\n"}
+,{"stream_name":"stdout","time":1.208325211,"data":"  \"gcc\": \"gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\",\n"}
+,{"stream_name":"stdout","time":1.208329073,"data":"  \"cmake\": \"cmake version 3.31.10\",\n"}
+,{"stream_name":"stdout","time":1.208332967,"data":"  \"ninja\": \"1.13.2.git.kitware.jobserver-pipe-1\",\n"}
+,{"stream_name":"stdout","time":1.208337019,"data":"  \"mem\": \"total        used        free      shared  buff/cache   available\\nMem:              31           1          26           0           4          30\\nSwap:              0           0           0\",\n"}
+,{"stream_name":"stdout","time":1.208342686,"data":"  \"disk_tmp\": \"Filesystem      Size  Used Avail Use% Mounted on\\noverlay         8.0T  7.1T  967G  89% /\"\n"}
+,{"stream_name":"stdout","time":1.20834715,"data":"}\n"}
+,{"stream_name":"stdout","time":1.208350721,"data":"=== STAGE probe_toolchain OK 0.4s\n"}
+,{"stream_name":"stdout","time":1.208580542,"data":"=== STAGE ensure_media_tools start\n"}
+,{"stream_name":"stdout","time":1.208592372,"data":"+ which meson\n"}
+,{"stream_name":"stdout","time":1.214126795,"data":"+ which ninja\n"}
+,{"stream_name":"stdout","time":1.215394449,"data":"+ which make\n"}
+,{"stream_name":"stdout","time":1.216674668,"data":"+ which nasm\n"}
+,{"stream_name":"stdout","time":1.217999382,"data":"+ which pkg-config\n"}
+,{"stream_name":"stdout","time":1.219348724,"data":"+ /usr/bin/python3 -m pip install -q meson\n"}
+,{"stream_name":"stdout","time":6.034806548,"data":"+ apt-get update -qq\n"}
+,{"stream_name":"stdout","time":12.579304188,"data":"+ apt-get install -y -qq nasm\n"}
+,{"stream_name":"stdout","time":20.943650242,"data":"+ which meson\n"}
+,{"stream_name":"stdout","time":20.944996897,"data":"+ which ninja\n"}
+,{"stream_name":"stdout","time":20.94622997,"data":"+ which make\n"}
+,{"stream_name":"stdout","time":20.947420244,"data":"+ which nasm\n"}
+,{"stream_name":"stdout","time":20.948666315,"data":"=== STAGE ensure_media_tools OK 19.7s\n"}
+,{"stream_name":"stdout","time":20.948999604,"data":"=== STAGE cuda_driver start\n"}
+,{"stream_name":"stdout","time":20.952692828,"data":"{\n"}
+,{"stream_name":"stdout","time":20.952707389,"data":"  \"dirs\": {\n"}
+,{"stream_name":"stdout","time":20.952713255,"data":"    \"/usr/local/nvidia/lib64\": [\n"}
+,{"stream_name":"stdout","time":20.952717841,"data":"      \"libcuda.so\",\n"}
+,{"stream_name":"stdout","time":20.952722265,"data":"      \"libcuda.so.1\",\n"}
+,{"stream_name":"stdout","time":20.952727078,"data":"      \"libcuda.so.580.178.04\"\n"}
+,{"stream_name":"stdout","time":20.952735596,"data":"    ],\n"}
+,{"stream_name":"stdout","time":20.952760997,"data":"    \"/usr/local/nvidia/lib\": null,\n"}
+,{"stream_name":"stdout","time":20.952765517,"data":"    \"/usr/local/cuda/lib64\": [],\n"}
+,{"stream_name":"stdout","time":20.95276906,"data":"    \"/usr/local/cuda/lib\": null,\n"}
+,{"stream_name":"stdout","time":20.952773097,"data":"    \"/usr/local/cuda/lib64/stubs\": [],\n"}
+,{"stream_name":"stdout","time":20.952776923000002,"data":"    \"/usr/local/cuda/lib/stubs\": null,\n"}
+,{"stream_name":"stdout","time":20.952780455,"data":"    \"/usr/local/cuda/targets/x86_64-linux/lib\": [],\n"}
+,{"stream_name":"stdout","time":20.952784094,"data":"    \"/usr/local/cuda/targets/x86_64-linux/lib/stubs\": [],\n"}
+,{"stream_name":"stdout","time":20.952787504,"data":"    \"/usr/lib/x86_64-linux-gnu\": [],\n"}
+,{"stream_name":"stdout","time":20.952791432,"data":"    \"/usr/lib64\": [],\n"}
+,{"stream_name":"stdout","time":20.952795251,"data":"    \"/usr/lib\": [],\n"}
+,{"stream_name":"stdout","time":20.952798714,"data":"    \"/opt/conda/lib\": null,\n"}
+,{"stream_name":"stdout","time":20.952802663,"data":"    \"/usr/local/lib\": []\n"}
+,{"stream_name":"stdout","time":20.952806263,"data":"  },\n"}
+,{"stream_name":"stdout","time":20.95280983,"data":"  \"versioned\": [\n"}
+,{"stream_name":"stdout","time":20.95281356,"data":"    \"/usr/local/nvidia/lib64/libcuda.so.1\",\n"}
+,{"stream_name":"stdout","time":20.952817619,"data":"    \"/usr/local/nvidia/lib64/libcuda.so.580.178.04\"\n"}
+,{"stream_name":"stdout","time":20.952821147999998,"data":"  ],\n"}
+,{"stream_name":"stdout","time":20.952824259,"data":"  \"unversioned\": [\n"}
+,{"stream_name":"stdout","time":20.952827558,"data":"    \"/usr/local/nvidia/lib64/libcuda.so\"\n"}
+,{"stream_name":"stdout","time":20.95283097,"data":"  ]\n"}
+,{"stream_name":"stdout","time":20.952834118,"data":"}\n"}
+,{"stream_name":"stdout","time":20.952839968,"data":"libcuda=/usr/local/nvidia/lib64/libcuda.so link_dir=/usr/local/nvidia/lib64 shim=/tmp/work/cuda-driver-shim.cmake\n"}
+,{"stream_name":"stdout","time":20.952844448,"data":"=== STAGE cuda_driver OK 0.0s\n"}
+,{"stream_name":"stdout","time":20.953180079,"data":"=== STAGE extract_kvmem start\n"}
+,{"stream_name":"stdout","time":79.388995489,"data":"=== STAGE extract_kvmem OK 58.4s\n"}
+,{"stream_name":"stdout","time":79.389506281,"data":"=== STAGE prepare_ninfer start\n"}
+,{"stream_name":"stdout","time":79.389599624,"data":"+ git init /tmp/work/kvmem/backends/ninfer\n"}
+,{"stream_name":"stdout","time":79.419341089,"data":"+ git -C /tmp/work/kvmem/backends/ninfer remote add origin https://github.com/iamwavecut/ninfer-all.git\n"}
+,{"stream_name":"stdout","time":79.424231908,"data":"+ git -C /tmp/work/kvmem/backends/ninfer fetch --depth 1 origin 6cc1f9fa438b7094685ae417dfa40e1ca324e617\n"}
+,{"stream_name":"stdout","time":82.562802618,"data":"+ git -C /tmp/work/kvmem/backends/ninfer checkout --detach 6cc1f9fa438b7094685ae417dfa40e1ca324e617\n"}
+,{"stream_name":"stdout","time":83.104259627,"data":"+ git -C /tmp/work/kvmem/backends/ninfer rev-parse HEAD\n"}
+,{"stream_name":"stdout","time":83.106480021,"data":"+ git -C /tmp/work/kvmem init\n"}
+,{"stream_name":"stdout","time":83.110408348,"data":"+ git -C /tmp/work/kvmem add -A\n"}
+,{"stream_name":"stdout","time":83.865841015,"data":"+ git -C /tmp/work/kvmem commit -m kvmem snapshot\n"}
+,{"stream_name":"stdout","time":83.99453129,"data":"+ /usr/bin/python3 scripts/prepare-backends.py --backend ninfer\n"}
+,{"stream_name":"stdout","time":129.497231581,"data":"=== STAGE prepare_ninfer OK 50.1s\n"}
+,{"stream_name":"stdout","time":129.497654007,"data":"=== STAGE acquire_model start\n"}
+,{"stream_name":"stdout","time":130.439188845,"data":"no artifact mounted; converting from GGUF in this kernel\n"}
+,{"stream_name":"stdout","time":130.439217665,"data":"+ /usr/bin/python3 -m pip install -q gguf\n"}
+,{"stream_name":"stderr","time":158.818255872,"data":"\rFetching 9 files:   0%|          | 0/9 [00:00\u003c?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":160.513572231,"data":"\rFetching 9 files:  11%|█         | 1/9 [00:00\u003c00:01,  4.46it/s]\rFetching 9 files:  67%|██████▋   | 6/9 [00:00\u003c00:00, 21.16it/s]\rFetching 9 files: 100%|██████████| 9/9 [00:01\u003c00:00,  3.98it/s]\rFetching 9 files: 100%|██████████| 9/9 [00:01\u003c00:00,  4.73it/s]\n"}
+,{"stream_name":"stdout","time":160.514017297,"data":"+ /usr/bin/python3 -m tools.convert --model /tmp/work/model_src/Qwen3.5-4B-config --recipe qwen3_5_dense_gguf --components text,mtp --source gguf=/tmp/work/model_src/Qwen3.5-4B-Q4_K_M.gguf --device cpu --out /tmp/work/qwen3_5_4b_mtp.ninfer\n"}
+,{"stream_name":"stdout","time":180.870792802,"data":"=== STAGE acquire_model OK 51.4s\n"}
+,{"stream_name":"stdout","time":180.871232,"data":"=== STAGE fetch_media start\n"}
+,{"stream_name":"stdout","time":180.871257872,"data":"+ bash scripts/fetch-media-sources.sh\n"}
+,{"stream_name":"stdout","time":186.634024919,"data":"=== STAGE fetch_media OK 5.8s\n"}
+,{"stream_name":"stdout","time":186.634505435,"data":"=== STAGE configure start\n"}
+,{"stream_name":"stdout","time":186.634525004,"data":"+ cmake -S /tmp/work/kvmem/backends/ninfer -B /tmp/work/kvmem/backends/ninfer/build-sm75 -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_CUDA_ARCHITECTURES=75 -DNINFER_BUILD_APPS=ON -DCMAKE_LIBRARY_PATH=/usr/local/nvidia/lib64 -DCMAKE_PROJECT_INCLUDE=/tmp/work/cuda-driver-shim.cmake\n"}
+,{"stream_name":"stdout","time":191.655782188,"data":"=== STAGE configure OK 5.0s\n"}
+,{"stream_name":"stdout","time":191.656407672,"data":"=== STAGE build start\n"}
+,{"stream_name":"stdout","time":191.656431792,"data":"+ cmake --build /tmp/work/kvmem/backends/ninfer/build-sm75 --parallel 4\n"}
+,{"stream_name":"stdout","time":14591.775522731,"data":"=== STAGE build FAIL: timeout after 14400s: ['cmake', '--build', '/tmp/work/kvmem/backends/ninfer/build-sm75', '--parallel', '4']\n"}
+,{"stream_name":"stdout","time":14591.775573907,"data":"_w3_h24_cached.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775579999,"data":"[648/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w3_h24_append.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775585181,"data":"[649/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w3_h16_append.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775590222,"data":"[650/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w3_h16_cached.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775594997,"data":"[651/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w4_h24_cached.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775599991,"data":"[652/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w4_h24_append.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775604774,"data":"[653/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w4_h16_cached.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775609275,"data":"[654/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w4_h16_append.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775624806,"data":"[655/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w5_h24_cached.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775628907,"data":"[656/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w5_h24_append.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775632624,"data":"[657/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w5_h16_cached.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775636349,"data":"[658/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w5_h16_append.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775640049,"data":"[659/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w6_h24_cached.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775643704,"data":"[660/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w6_h24_append.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775647242,"data":"[661/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w6_h16_cached.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775652266,"data":"[662/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w6_h16_append.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775656112,"data":"\n"}
+,{"stream_name":"stdout","time":14591.775659729,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":14591.775678657,"data":"  File \"/kaggle/src/script.py\", line 123, in sh\n"}
+,{"stream_name":"stdout","time":14591.775682457,"data":"    r = subprocess.run(cmd, cwd=cwd, env=env, timeout=timeout, capture_output=True, text=True)\n"}
+,{"stream_name":"stdout","time":14591.775686103,"data":"  File \"/usr/lib/python3.13/subprocess.py\", line 557, in run\n"}
+,{"stream_name":"stdout","time":14591.775689686,"data":"    stdout, stderr = process.communicate(input, timeout=timeout)\n"}
+,{"stream_name":"stdout","time":14591.775693202,"data":"                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":14591.775696667,"data":"  File \"/usr/lib/python3.13/subprocess.py\", line 1223, in communicate\n"}
+,{"stream_name":"stdout","time":14591.77571679,"data":"    stdout, stderr = self._communicate(input, endtime, timeout)\n"}
+,{"stream_name":"stdout","time":14591.775720577,"data":"                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":14591.775724467,"data":"  File \"/usr/lib/python3.13/subprocess.py\", line 2156, in _communicate\n"}
+,{"stream_name":"stdout","time":14591.775728754,"data":"    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n"}
+,{"stream_name":"stdout","time":14591.775732524,"data":"    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":14591.775736284,"data":"  File \"/usr/lib/python3.13/subprocess.py\", line 1270, in _check_timeout\n"}
+,{"stream_name":"stdout","time":14591.775740344,"data":"    raise TimeoutExpired(\n"}
+,{"stream_name":"stdout","time":14591.775743895,"data":"    ...\u003c2 lines\u003e...\n"}
+,{"stream_name":"stdout","time":14591.775747987,"data":"            stderr=b''.join(stderr_seq) if stderr_seq else None)\n"}
+,{"stream_name":"stdout","time":14591.775751552,"data":"subprocess.TimeoutExpired: Command '['cmake', '--build', '/tmp/work/kvmem/backends/ninfer/build-sm75', '--parallel', '4']' timed out after 14400 seconds\n"}
+,{"stream_name":"stdout","time":14591.775755558,"data":"\n"}
+,{"stream_name":"stdout","time":14591.775764662,"data":"During handling of the above exception, another exception occurred:\n"}
+,{"stream_name":"stdout","time":14591.775768663,"data":"\n"}
+,{"stream_name":"stdout","time":14591.775772074,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":14591.775775682,"data":"  File \"/kaggle/src/script.py\", line 101, in run\n"}
+,{"stream_name":"stdout","time":14591.77577948,"data":"    out = fn(*a, **k)\n"}
+,{"stream_name":"stdout","time":14591.775783115,"data":"  File \"/kaggle/src/script.py\", line 456, in build\n"}
+,{"stream_name":"stdout","time":14591.775787005,"data":"    sh([\"cmake\", \"--build\", cfg[\"build_dir\"], \"--parallel\", str(os.cpu_count() or 4)], timeout=14400)\n"}
+,{"stream_name":"stdout","time":14591.775791476,"data":"    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":14591.775795454,"data":"  File \"/kaggle/src/script.py\", line 126, in sh\n"}
+,{"stream_name":"stdout","time":14591.775799399,"data":"    raise RuntimeError(f\"timeout after {timeout}s: {cmd}\\n{tail}\")\n"}
+,{"stream_name":"stdout","time":14591.775803408,"data":"RuntimeError: timeout after 14400s: ['cmake', '--build', '/tmp/work/kvmem/backends/ninfer/build-sm75', '--parallel', '4']\n"}
+,{"stream_name":"stdout","time":14591.775807488,"data":"_w3_h24_cached.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775811284,"data":"[648/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w3_h24_append.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775816082,"data":"[649/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w3_h16_append.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775820162,"data":"[650/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w3_h16_cached.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775824223,"data":"[651/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w4_h24_cached.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775828371,"data":"[652/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w4_h24_append.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775832384,"data":"[653/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w4_h16_cached.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775836251,"data":"[654/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w4_h16_append.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775840297,"data":"[655/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w5_h24_cached.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775844304,"data":"[656/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w5_h24_append.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775859051,"data":"[657/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w5_h16_cached.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775862766,"data":"[658/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w5_h16_append.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775866581,"data":"[659/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w6_h24_cached.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775870645,"data":"[660/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w6_h24_append.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775877696,"data":"[661/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w6_h16_cached.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775881677,"data":"[662/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w6_h16_append.cu.o\n"}
+,{"stream_name":"stdout","time":14591.775885494,"data":"\n"}
+,{"stream_name":"stdout","time":14591.775888812,"data":"\n"}
+,{"stream_name":"stderr","time":14591.780813669,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":14591.781691537,"data":"  File \"/kaggle/src/script.py\", line 123, in sh\n"}
+,{"stream_name":"stderr","time":14591.781706551,"data":"    r = subprocess.run(cmd, cwd=cwd, env=env, timeout=timeout, capture_output=True, text=True)\n"}
+,{"stream_name":"stderr","time":14591.781711166,"data":"  File \"/usr/lib/python3.13/subprocess.py\", line 557, in run\n"}
+,{"stream_name":"stderr","time":14591.781715186,"data":"    stdout, stderr = process.communicate(input, timeout=timeout)\n"}
+,{"stream_name":"stderr","time":14591.781718886,"data":"                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":14591.781722717,"data":"  File \"/usr/lib/python3.13/subprocess.py\", line 1223, in communicate\n"}
+,{"stream_name":"stderr","time":14591.781726438,"data":"    stdout, stderr = self._communicate(input, endtime, timeout)\n"}
+,{"stream_name":"stderr","time":14591.781730013,"data":"                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":14591.781733516,"data":"  File \"/usr/lib/python3.13/subprocess.py\", line 2156, in _communicate\n"}
+,{"stream_name":"stderr","time":14591.781737314,"data":"    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n"}
+,{"stream_name":"stderr","time":14591.781740916,"data":"    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":14591.781744409,"data":"  File \"/usr/lib/python3.13/subprocess.py\", line 1270, in _check_timeout\n"}
+,{"stream_name":"stderr","time":14591.781748133,"data":"    raise TimeoutExpired(\n"}
+,{"stream_name":"stderr","time":14591.781751601,"data":"    ...\u003c2 lines\u003e...\n"}
+,{"stream_name":"stderr","time":14591.781755351,"data":"            stderr=b''.join(stderr_seq) if stderr_seq else None)\n"}
+,{"stream_name":"stderr","time":14591.784633946,"data":"subprocess.TimeoutExpired: Command '['cmake', '--build', '/tmp/work/kvmem/backends/ninfer/build-sm75', '--parallel', '4']' timed out after 14400 seconds\n"}
+,{"stream_name":"stderr","time":14591.78464898,"data":"\n"}
+,{"stream_name":"stderr","time":14591.78465329,"data":"During handling of the above exception, another exception occurred:\n"}
+,{"stream_name":"stderr","time":14591.78465711,"data":"\n"}
+,{"stream_name":"stderr","time":14591.784668118,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":14591.785416462,"data":"  File \"/kaggle/src/script.py\", line 716, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":14591.785426626,"data":"    main()\n"}
+,{"stream_name":"stderr","time":14591.785430495,"data":"    ~~~~^^\n"}
+,{"stream_name":"stderr","time":14591.785434244,"data":"  File \"/kaggle/src/script.py\", line 698, in main\n"}
+,{"stream_name":"stderr","time":14591.785437826,"data":"    build(cfg)\n"}
+,{"stream_name":"stderr","time":14591.78544124,"data":"    ~~~~~^^^^^\n"}
+,{"stream_name":"stderr","time":14591.785444829,"data":"  File \"/kaggle/src/script.py\", line 101, in run\n"}
+,{"stream_name":"stderr","time":14591.785448741,"data":"    out = fn(*a, **k)\n"}
+,{"stream_name":"stderr","time":14591.785461623,"data":"  File \"/kaggle/src/script.py\", line 456, in build\n"}
+,{"stream_name":"stderr","time":14591.785465583,"data":"    sh([\"cmake\", \"--build\", cfg[\"build_dir\"], \"--parallel\", str(os.cpu_count() or 4)], timeout=14400)\n"}
+,{"stream_name":"stderr","time":14591.785469776,"data":"    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":14591.785473445,"data":"  File \"/kaggle/src/script.py\", line 126, in sh\n"}
+,{"stream_name":"stderr","time":14591.78547726,"data":"    raise RuntimeError(f\"timeout after {timeout}s: {cmd}\\n{tail}\")\n"}
+,{"stream_name":"stderr","time":14591.785492906,"data":"RuntimeError: timeout after 14400s: ['cmake', '--build', '/tmp/work/kvmem/backends/ninfer/build-sm75', '--parallel', '4']\n"}
+,{"stream_name":"stderr","time":14591.785501715,"data":"_w3_h24_cached.cu.o\n"}
+,{"stream_name":"stderr","time":14591.785505016,"data":"[648/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w3_h24_append.cu.o\n"}
+,{"stream_name":"stderr","time":14591.78550874,"data":"[649/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w3_h16_append.cu.o\n"}
+,{"stream_name":"stderr","time":14591.785512538,"data":"[650/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w3_h16_cached.cu.o\n"}
+,{"stream_name":"stderr","time":14591.78551639,"data":"[651/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w4_h24_cached.cu.o\n"}
+,{"stream_name":"stderr","time":14591.78552018,"data":"[652/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w4_h24_append.cu.o\n"}
+,{"stream_name":"stderr","time":14591.785523831,"data":"[653/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w4_h16_cached.cu.o\n"}
+,{"stream_name":"stderr","time":14591.785527453,"data":"[654/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w4_h16_append.cu.o\n"}
+,{"stream_name":"stderr","time":14591.78553118,"data":"[655/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w5_h24_cached.cu.o\n"}
+,{"stream_name":"stderr","time":14591.785534839,"data":"[656/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w5_h24_append.cu.o\n"}
+,{"stream_name":"stderr","time":14591.785539396,"data":"[657/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w5_h16_cached.cu.o\n"}
+,{"stream_name":"stderr","time":14591.785543214,"data":"[658/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w5_h16_append.cu.o\n"}
+,{"stream_name":"stderr","time":14591.785547036,"data":"[659/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w6_h24_cached.cu.o\n"}
+,{"stream_name":"stderr","time":14591.785550751,"data":"[660/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w6_h24_append.cu.o\n"}
+,{"stream_name":"stderr","time":14591.78555464,"data":"[661/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w6_h16_cached.cu.o\n"}
+,{"stream_name":"stderr","time":14591.785558403,"data":"[662/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w6_h16_append.cu.o\n"}
+,{"stream_name":"stderr","time":14591.785566231,"data":"\n"}
+,{"stream_name":"stderr","time":14596.669137516,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":14596.669166186,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":14597.227883527,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":14597.22793497,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":14599.251773399,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":14601.578420153,"data":"[NbConvertApp] Writing 417296 bytes to __results__.html\n"}
+]

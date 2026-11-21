@@ -1,0 +1,74 @@
+[{"stream_name":"stdout","time":78.533871404,"data":"{\n"}
+,{"stream_name":"stdout","time":78.533915817,"data":"  \"driver\": {\n"}
+,{"stream_name":"stdout","time":78.533920695,"data":"    \"dirs\": {\n"}
+,{"stream_name":"stdout","time":78.533923142,"data":"      \"/usr/local/nvidia/lib64\": [\n"}
+,{"stream_name":"stdout","time":78.533925531,"data":"        \"libcuda.so\",\n"}
+,{"stream_name":"stdout","time":78.533927797,"data":"        \"libcuda.so.1\",\n"}
+,{"stream_name":"stdout","time":78.533930045,"data":"        \"libcuda.so.580.178.04\",\n"}
+,{"stream_name":"stdout","time":78.53393233,"data":"        \"libcudadebugger.so.1\",\n"}
+,{"stream_name":"stdout","time":78.533934663,"data":"        \"libcudadebugger.so.580.178.04\",\n"}
+,{"stream_name":"stdout","time":78.533936912,"data":"        \"libnvidia-ml.so\",\n"}
+,{"stream_name":"stdout","time":78.53393912,"data":"        \"libnvidia-ml.so.1\",\n"}
+,{"stream_name":"stdout","time":78.533941338,"data":"        \"libnvidia-ml.so.580.178.04\"\n"}
+,{"stream_name":"stdout","time":78.533943672,"data":"      ],\n"}
+,{"stream_name":"stdout","time":78.533945835,"data":"      \"/usr/local/nvidia/lib\": [],\n"}
+,{"stream_name":"stdout","time":78.533948929,"data":"      \"/usr/local/nvidia\": [],\n"}
+,{"stream_name":"stdout","time":78.533964879,"data":"      \"/usr/lib/x86_64-linux-gnu\": [],\n"}
+,{"stream_name":"stdout","time":78.533969128,"data":"      \"/usr/lib64\": [],\n"}
+,{"stream_name":"stdout","time":78.533972858,"data":"      \"/usr/lib\": [],\n"}
+,{"stream_name":"stdout","time":78.533976214,"data":"      \"/usr/local/cuda/lib64/stubs\": [],\n"}
+,{"stream_name":"stdout","time":78.533980195,"data":"      \"/usr/local/cuda/targets/x86_64-linux/lib/stubs\": [],\n"}
+,{"stream_name":"stdout","time":78.533984045,"data":"      \"/opt/conda/lib\": [],\n"}
+,{"stream_name":"stdout","time":78.53398734,"data":"      \"/usr/local/lib\": []\n"}
+,{"stream_name":"stdout","time":78.533990571,"data":"    },\n"}
+,{"stream_name":"stdout","time":78.533993732,"data":"    \"find\": {\n"}
+,{"stream_name":"stdout","time":78.533996985,"data":"      \"cmd\": \"find / -xdev -name 'libcuda*' -o -xdev -name 'libnvidia-ml*' 2\u003e/dev/null | grep -v '^/proc' | head -40\",\n"}
+,{"stream_name":"stdout","time":78.534001015,"data":"      \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":78.534012214,"data":"      \"out\": \"/root/.julia/packages/CUDACore/6N8AA/src/device/intrinsics/libcudadevrt_common.jl\\n/root/.julia/packages/CUDACore/6N8AA/src/device/intrinsics/libcudadevrt.jl\\n/root/.julia/packages/CUDACore/6N8AA/lib/cudadrv/libcuda.jl\\n/root/.julia/packages/CUDACore/6N8AA/lib/cudadrv/libcuda_deprecated.jl\\n/root/.julia/packages/CUDACore/GtzaO/src/device/intrinsics/libcudadevrt_common.jl\\n/root/.julia/packages/CUDACore/GtzaO/src/device/intrinsics/libcudadevrt.jl\\n/root/.julia/packages/CUDACore/GtzaO/lib/cudadrv/libcuda.jl\\n/root/.julia/packages/CUDACore/GtzaO/lib/cudadrv/libcuda_deprecated.jl\\n/root/.julia/packages/CUDA/nBYpB/CUDACore/src/device/intrinsics/libcudadevrt_common.jl\\n/root/.julia/packages/CUDA/nBYpB/CUDACore/src/device/intrinsics/libcudadevrt.jl\\n/root/.julia/packages/CUDA/nBYpB/CUDACore/lib/cudadrv/libcuda.jl\\n/root/.julia/packages/CUDA/nBYpB/CUDACore/lib/cudadrv/libcuda_deprecated.jl\\n/root/.julia/packages/CUDA/nBYpB/res/wrap/libcuda_prologue.jl\\n/root/.julia/packages/CUDA/3Opfa/CUDACore/src/device/intrinsics/libcudadevrt_common.jl\\n/root/.julia/packages/CUDA/3Opfa/CUDACore/src/device/intrinsics/libcudadevrt.jl\\n/root/.julia/packages/CUDA/3Opfa/CUDACore/lib/cudadrv/libcuda.jl\\n/root/.julia/packages/CUDA/3Opfa/CUDACore/lib/cudadrv/libcuda_deprecated.jl\\n/root/.julia/packages/CUDA/3Opfa/res/wrap/libcuda_prologue.jl\\n/root/.julia/artifacts/5bf47e8b1f0daf3dafb58ff7f319899fecdd4372/lib/libcuda.so.1\\n/root/.julia/artifacts/5bf47e8b1f0daf3dafb58ff7f319899fecdd4372/lib/libcudadebugger.so.610.57.04\\n/root/.julia/artifacts/5bf47e8b1f0daf3dafb58ff7f319899fecdd4372/lib/libcuda.so\\n/root/.julia/artifacts/5bf47e8b1f0daf3dafb58ff7f319899fecdd4372/lib/libcudadebugger.so.1\\n/root/.julia/artifacts/5bf47e8b1f0daf3dafb58ff7f319899fecdd4372/lib/libcuda.so.610.57.04\\n/root/.julia/artifacts/3cd7a8e8fe264178b19b591f55b041d2018717a7/lib/libcudadevrt.a\\n/root/.julia/artifacts/2c8e4324b86fc70a7c041ce8dc72b5f9b41a7a98/lib/libcuda.so.1\\n/root/.julia/artifacts/2c8e4324b86fc70a7c041ce8dc72b5f9b41a7a98/lib/libcuda.so.610.43.02\\n/root/.julia/artifacts/2c8e4324b86fc70a7c041ce8dc72b5f9b41a7a98/lib/libcuda.so\\n/root/.julia/artifacts/2c8e4324b86fc70a7c041ce8dc72b5f9b41a7a98/lib/libcudadebugger.so.1\\n/root/.julia/artifacts/2c8e4324b86fc70a7c041ce8dc72b5f9b41a7a98/lib/libcudadebugger.so.610.43.02\\n/opt/nvidia/nsight-compute/2025.3.1/target/linux-desktop-glibc_2_11_3-x64/libcuda-injection.so\\n/opt/nvidia/nsight-compute/2025.3.1/target/linux-desktop-t210-a64/libcuda-injection.so\\n/usr/local/lib/python3.13/dist-packages/tensorflow/include/third_party/gpus/cuda/libcudacxx\\n/usr/local/lib/python3.13/dist-packages/tensorflow/include/external/cuda_cccl/libcudacxx\\n/usr/local/lib/python3.13/dist-packages/libcugraph/lib64/rapids/cmake/libcudacxx\\n/usr/local/lib/python3.13/dist-packages/libcugraph/lib64/rapids/cmake/libcudacxx/libcudacxx-config.cmake\\n/usr/local/lib/python3.13/dist-packages/libcugraph/lib64/rapids/cmake/libcudacxx/libcudacxx-config-version.cmake\\n/usr/local/lib/python3.13/dist-packages/libcugraph/lib64/rapids/cmake/libcudacxx/libcudacxx-header-search.cmake\\n/usr/local/lib/python3.13/dist-packages/libcudf/lib64/rapids/cmake/libcudacxx\\n/usr/local/lib/python3.13/dist-packages/libcudf/lib64/rapids/cmake/libcudacxx/libcudacxx-config.cmake\\n/usr/local/lib/python3.13/dist-packages/libcudf/lib64/rapids/cmake/libcudacxx/libcudacxx-config-version.cmake\",\n"}
+,{"stream_name":"stdout","time":78.534040804,"data":"      \"err\": \"\"\n"}
+,{"stream_name":"stdout","time":78.53404335,"data":"    },\n"}
+,{"stream_name":"stdout","time":78.534045564,"data":"    \"ldconfig\": {\n"}
+,{"stream_name":"stdout","time":78.534048683,"data":"      \"cmd\": \"ldconfig -p 2\u003e/dev/null | grep -i -E 'libcuda|libnvidia-ml' | head -20\",\n"}
+,{"stream_name":"stdout","time":78.53406433,"data":"      \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":78.534068192,"data":"      \"out\": \"libcudart.so.13 (libc6,x86-64) =\u003e /usr/local/cuda/targets/x86_64-linux/lib/libcudart.so.13\\n\\tlibcudart.so (libc6,x86-64) =\u003e /usr/local/cuda/targets/x86_64-linux/lib/libcudart.so\",\n"}
+,{"stream_name":"stdout","time":78.534072791,"data":"      \"err\": \"\"\n"}
+,{"stream_name":"stdout","time":78.534076724,"data":"    }\n"}
+,{"stream_name":"stdout","time":78.534080283,"data":"  },\n"}
+,{"stream_name":"stdout","time":78.534083402,"data":"  \"ctypes\": {\n"}
+,{"stream_name":"stdout","time":78.534086617,"data":"    \"loaded\": true,\n"}
+,{"stream_name":"stdout","time":78.534089778,"data":"    \"handle\": \"libcuda.so.1\",\n"}
+,{"stream_name":"stdout","time":78.534093157,"data":"    \"maps\": [\n"}
+,{"stream_name":"stdout","time":78.534096355,"data":"      \"/usr/local/nvidia/lib64/libcuda.so.580.178.04\"\n"}
+,{"stream_name":"stdout","time":78.53409968,"data":"    ],\n"}
+,{"stream_name":"stdout","time":78.534102813,"data":"    \"cuInit_rc\": 0,\n"}
+,{"stream_name":"stdout","time":78.534106102,"data":"    \"cuDeviceGet_rc\": 0,\n"}
+,{"stream_name":"stdout","time":78.534109278,"data":"    \"cuDeviceGetName_rc\": 0,\n"}
+,{"stream_name":"stdout","time":78.534112647,"data":"    \"device_name\": \"Tesla T4\"\n"}
+,{"stream_name":"stdout","time":78.534115945,"data":"  },\n"}
+,{"stream_name":"stdout","time":78.534122619,"data":"  \"symlink\": {\n"}
+,{"stream_name":"stdout","time":78.534125931,"data":"    \"from\": \"/usr/local/nvidia/lib64/libcuda.so.580.178.04\",\n"}
+,{"stream_name":"stdout","time":78.53412947,"data":"    \"to\": \"/tmp/work/cuda-stub/libcuda.so\"\n"}
+,{"stream_name":"stdout","time":78.534132856,"data":"  },\n"}
+,{"stream_name":"stdout","time":78.534137553,"data":"  \"link_test\": {\n"}
+,{"stream_name":"stdout","time":78.534144342,"data":"    \"stub_dir\": \"/tmp/work/cuda-stub\",\n"}
+,{"stream_name":"stdout","time":78.534158819,"data":"    \"build\": {\n"}
+,{"stream_name":"stdout","time":78.534162537,"data":"      \"cmd\": \"nvcc -arch=sm_75 -o /tmp/work/driver_probe /tmp/work/driver_probe.cu -lcuda 2\u003e\u00261 | tail -20\",\n"}
+,{"stream_name":"stdout","time":78.534167133,"data":"      \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":78.534170995,"data":"      \"out\": \"\",\n"}
+,{"stream_name":"stdout","time":78.534174961,"data":"      \"err\": \"\"\n"}
+,{"stream_name":"stdout","time":78.534178528,"data":"    },\n"}
+,{"stream_name":"stdout","time":78.534181645,"data":"    \"run\": {\n"}
+,{"stream_name":"stdout","time":78.534184911,"data":"      \"cmd\": \"/tmp/work/driver_probe 2\u003e\u00261 | tail -5\",\n"}
+,{"stream_name":"stdout","time":78.534188356,"data":"      \"rc\": 0,\n"}
+,{"stream_name":"stdout","time":78.534191591,"data":"      \"out\": \"driver ok: 2 device(s), first=Tesla T4\",\n"}
+,{"stream_name":"stdout","time":78.534194964,"data":"      \"err\": \"\"\n"}
+,{"stream_name":"stdout","time":78.534198178,"data":"    }\n"}
+,{"stream_name":"stdout","time":78.534201329,"data":"  }\n"}
+,{"stream_name":"stdout","time":78.534204371,"data":"}\n"}
+,{"stream_name":"stderr","time":81.152206542,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":81.152233538,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":81.545946221,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":81.54596839,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":82.695803738,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":83.917550918,"data":"[NbConvertApp] Writing 295257 bytes to __results__.html\n"}
+]

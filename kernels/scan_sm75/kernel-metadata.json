@@ -1,0 +1,14 @@
+{
+  "id": "<kaggle-user>/kvmem-scan-sm75",
+  "title": "kvmem-scan-sm75",
+  "code_file": "scan_kernel.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": ["<kaggle-user>/kvmem-src"],
+  "competition_sources": [],
+  "kernel_sources": []
+}

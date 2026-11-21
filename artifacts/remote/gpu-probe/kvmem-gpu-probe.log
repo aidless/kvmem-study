@@ -1,0 +1,50 @@
+[{"stream_name":"stdout","time":1.6006980629999998,"data":"--- nvidia_smi_L ---\n"}
+,{"stream_name":"stdout","time":1.600737775,"data":"GPU 0: Tesla T4 (UUID: GPU-5115a9ed-9b7b-dcc3-719d-16f5eb966b36)\n"}
+,{"stream_name":"stdout","time":1.60074531,"data":"GPU 1: Tesla T4 (UUID: GPU-8bf65088-6931-9378-f6a4-eb34efba7da5)\n"}
+,{"stream_name":"stdout","time":1.6007499429999998,"data":"\n"}
+,{"stream_name":"stdout","time":1.600754156,"data":"--- nvidia_smi_query ---\n"}
+,{"stream_name":"stdout","time":1.600758914,"data":"name, memory.total [MiB], compute_cap, driver_version\n"}
+,{"stream_name":"stdout","time":1.6007635119999999,"data":"Tesla T4, 15360 MiB, 7.5, 580.178.04\n"}
+,{"stream_name":"stdout","time":1.600767614,"data":"Tesla T4, 15360 MiB, 7.5, 580.178.04\n"}
+,{"stream_name":"stdout","time":1.600771908,"data":"\n"}
+,{"stream_name":"stdout","time":1.6007760260000001,"data":"--- nvcc ---\n"}
+,{"stream_name":"stdout","time":1.600780548,"data":"nvcc: NVIDIA (R) Cuda compiler driver\n"}
+,{"stream_name":"stdout","time":1.600784934,"data":"Copyright (c) 2005-2025 NVIDIA Corporation\n"}
+,{"stream_name":"stdout","time":1.6007896750000001,"data":"Built on Wed_Aug_20_01:58:59_PM_PDT_2025\n"}
+,{"stream_name":"stdout","time":1.600793551,"data":"Cuda compilation tools, release 13.0, V13.0.88\n"}
+,{"stream_name":"stdout","time":1.600797872,"data":"Build cuda_13.0.r13.0/compiler.36424714_0\n"}
+,{"stream_name":"stdout","time":1.6008022450000001,"data":"\n"}
+,{"stream_name":"stdout","time":1.6008060419999999,"data":"--- cuda_home ---\n"}
+,{"stream_name":"stdout","time":1.600810614,"data":"/usr/local/cuda\n"}
+,{"stream_name":"stdout","time":1.600814453,"data":"/usr/local/cuda-13\n"}
+,{"stream_name":"stdout","time":1.6008189640000001,"data":"/usr/local/cuda-13.0\n"}
+,{"stream_name":"stdout","time":1.600823976,"data":"\n"}
+,{"stream_name":"stdout","time":1.600828122,"data":"--- cpu ---\n"}
+,{"stream_name":"stdout","time":1.600832786,"data":"4\n"}
+,{"stream_name":"stdout","time":1.6008374440000002,"data":"\n"}
+,{"stream_name":"stdout","time":1.600842133,"data":"--- mem_gb ---\n"}
+,{"stream_name":"stdout","time":1.600846942,"data":"total        used        free      shared  buff/cache   available\n"}
+,{"stream_name":"stdout","time":1.600851831,"data":"Mem:              31           1          26           0           4          30\n"}
+,{"stream_name":"stdout","time":1.600856201,"data":"\n"}
+,{"stream_name":"stdout","time":1.60086014,"data":"--- disk ---\n"}
+,{"stream_name":"stdout","time":1.600864796,"data":"/dev/loop2       20G  104K   20G   1% /kaggle/working\n"}
+,{"stream_name":"stdout","time":1.600869112,"data":"\n"}
+,{"stream_name":"stdout","time":6.668916645,"data":"compile_run[sm_75]: OK\n"}
+,{"stream_name":"stdout","time":8.368169616,"data":"compile_run[sm_80]: FAIL\n"}
+,{"stream_name":"stdout","time":8.368207456,"data":"    \n"}
+,{"stream_name":"stdout","time":10.011566903,"data":"compile_run[sm_86]: FAIL\n"}
+,{"stream_name":"stdout","time":10.011602961,"data":"    \n"}
+,{"stream_name":"stdout","time":11.732113097,"data":"compile_run[sm_89]: FAIL\n"}
+,{"stream_name":"stdout","time":11.732146867,"data":"    \n"}
+,{"stream_name":"stdout","time":13.467191026,"data":"compile_run[sm_90]: FAIL\n"}
+,{"stream_name":"stdout","time":13.467227603,"data":"    \n"}
+,{"stream_name":"stdout","time":15.988231255,"data":"compile_run[sm_120a]: FAIL\n"}
+,{"stream_name":"stdout","time":15.988258139,"data":"    \n"}
+,{"stream_name":"stdout","time":15.988435261,"data":"DONE\n"}
+,{"stream_name":"stderr","time":18.93359036,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":18.933630825,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":19.487278323,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":19.487304691,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":22.168533127,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":23.578461824,"data":"[NbConvertApp] Writing 280341 bytes to __results__.html\n"}
+]

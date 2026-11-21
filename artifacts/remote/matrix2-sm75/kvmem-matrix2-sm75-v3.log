@@ -1,0 +1,118 @@
+[{"stream_name":"stdout","time":1.294584844,"data":"=== STAGE probe_toolchain start\n"}
+,{"stream_name":"stdout","time":1.29462379,"data":"+ nvidia-smi -L\n"}
+,{"stream_name":"stdout","time":1.33127242,"data":"+ nvcc --version\n"}
+,{"stream_name":"stdout","time":1.353222801,"data":"+ gcc --version\n"}
+,{"stream_name":"stdout","time":1.40014094,"data":"+ cmake --version\n"}
+,{"stream_name":"stdout","time":1.8315592920000001,"data":"+ ninja --version\n"}
+,{"stream_name":"stdout","time":1.8387700809999998,"data":"+ free -g\n"}
+,{"stream_name":"stdout","time":1.862793127,"data":"+ df -h /tmp\n"}
+,{"stream_name":"stdout","time":1.865947857,"data":"+ ninja --version\n"}
+,{"stream_name":"stdout","time":1.8681478870000001,"data":"{\n"}
+,{"stream_name":"stdout","time":1.868162959,"data":"  \"nvidia_smi\": \"GPU 0: Tesla T4 (UUID: GPU-bdef428c-6462-6051-3107-078961b8cc43)\",\n"}
+,{"stream_name":"stdout","time":1.868167649,"data":"  \"nvcc\": \"nvcc: NVIDIA (R) Cuda compiler driver\",\n"}
+,{"stream_name":"stdout","time":1.868172166,"data":"  \"gcc\": \"gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\",\n"}
+,{"stream_name":"stdout","time":1.8681766340000001,"data":"  \"cmake\": \"cmake version 3.31.10\",\n"}
+,{"stream_name":"stdout","time":1.868180626,"data":"  \"ninja\": \"1.13.2.git.kitware.jobserver-pipe-1\",\n"}
+,{"stream_name":"stdout","time":1.86818506,"data":"  \"mem\": \"total        used        free      shared  buff/cache   available\\nMem:              31           1          25           0           5          30\\nSwap:              0           0           0\",\n"}
+,{"stream_name":"stdout","time":1.868190636,"data":"  \"disk_tmp\": \"Filesystem      Size  Used Avail Use% Mounted on\\noverlay         8.0T  5.6T  2.5T  70% /\"\n"}
+,{"stream_name":"stdout","time":1.86819544,"data":"}\n"}
+,{"stream_name":"stdout","time":1.868199242,"data":"=== STAGE probe_toolchain OK 0.6s\n"}
+,{"stream_name":"stdout","time":1.868382858,"data":"=== STAGE ensure_media_tools start\n"}
+,{"stream_name":"stdout","time":1.868394108,"data":"+ which meson\n"}
+,{"stream_name":"stdout","time":1.87643453,"data":"+ which ninja\n"}
+,{"stream_name":"stdout","time":1.877878972,"data":"+ which make\n"}
+,{"stream_name":"stdout","time":1.879191231,"data":"+ which nasm\n"}
+,{"stream_name":"stdout","time":1.880543917,"data":"+ which pkg-config\n"}
+,{"stream_name":"stdout","time":1.882547045,"data":"+ /usr/bin/python3 -m pip install -q meson\n"}
+,{"stream_name":"stdout","time":7.579191964,"data":"+ apt-get update -qq\n"}
+,{"stream_name":"stdout","time":11.743395117,"data":"+ apt-get install -y -qq nasm\n"}
+,{"stream_name":"stdout","time":19.069199531,"data":"+ which meson\n"}
+,{"stream_name":"stdout","time":19.070621249,"data":"+ which ninja\n"}
+,{"stream_name":"stdout","time":19.07202147,"data":"+ which make\n"}
+,{"stream_name":"stdout","time":19.073290555,"data":"+ which nasm\n"}
+,{"stream_name":"stdout","time":19.074516344,"data":"=== STAGE ensure_media_tools OK 17.2s\n"}
+,{"stream_name":"stdout","time":19.074839981,"data":"=== STAGE cuda_driver start\n"}
+,{"stream_name":"stdout","time":19.078945801,"data":"{\n"}
+,{"stream_name":"stdout","time":19.07895855,"data":"  \"dirs\": {\n"}
+,{"stream_name":"stdout","time":19.078962747,"data":"    \"/usr/local/nvidia/lib64\": [\n"}
+,{"stream_name":"stdout","time":19.078972794,"data":"      \"libcuda.so\",\n"}
+,{"stream_name":"stdout","time":19.078975667,"data":"      \"libcuda.so.1\",\n"}
+,{"stream_name":"stdout","time":19.07897807,"data":"      \"libcuda.so.580.178.04\"\n"}
+,{"stream_name":"stdout","time":19.078980507,"data":"    ],\n"}
+,{"stream_name":"stdout","time":19.078992232,"data":"    \"/usr/local/nvidia/lib\": null,\n"}
+,{"stream_name":"stdout","time":19.078995315,"data":"    \"/usr/local/cuda/lib64\": [],\n"}
+,{"stream_name":"stdout","time":19.078997731,"data":"    \"/usr/local/cuda/lib\": null,\n"}
+,{"stream_name":"stdout","time":19.079000111,"data":"    \"/usr/local/cuda/lib64/stubs\": [],\n"}
+,{"stream_name":"stdout","time":19.079002527,"data":"    \"/usr/local/cuda/lib/stubs\": null,\n"}
+,{"stream_name":"stdout","time":19.079005163,"data":"    \"/usr/local/cuda/targets/x86_64-linux/lib\": [],\n"}
+,{"stream_name":"stdout","time":19.079007585,"data":"    \"/usr/local/cuda/targets/x86_64-linux/lib/stubs\": [],\n"}
+,{"stream_name":"stdout","time":19.079009996,"data":"    \"/usr/lib/x86_64-linux-gnu\": [],\n"}
+,{"stream_name":"stdout","time":19.079012413,"data":"    \"/usr/lib64\": [],\n"}
+,{"stream_name":"stdout","time":19.079015847,"data":"    \"/usr/lib\": [],\n"}
+,{"stream_name":"stdout","time":19.079033266,"data":"    \"/opt/conda/lib\": null,\n"}
+,{"stream_name":"stdout","time":19.079037279,"data":"    \"/usr/local/lib\": []\n"}
+,{"stream_name":"stdout","time":19.079040998,"data":"  },\n"}
+,{"stream_name":"stdout","time":19.079045003,"data":"  \"versioned\": [\n"}
+,{"stream_name":"stdout","time":19.079049356,"data":"    \"/usr/local/nvidia/lib64/libcuda.so.1\",\n"}
+,{"stream_name":"stdout","time":19.079052993,"data":"    \"/usr/local/nvidia/lib64/libcuda.so.580.178.04\"\n"}
+,{"stream_name":"stdout","time":19.079056915,"data":"  ],\n"}
+,{"stream_name":"stdout","time":19.07906111,"data":"  \"unversioned\": [\n"}
+,{"stream_name":"stdout","time":19.079064923,"data":"    \"/usr/local/nvidia/lib64/libcuda.so\"\n"}
+,{"stream_name":"stdout","time":19.079069081,"data":"  ]\n"}
+,{"stream_name":"stdout","time":19.079073348,"data":"}\n"}
+,{"stream_name":"stdout","time":19.079104961,"data":"libcuda=/usr/local/nvidia/lib64/libcuda.so link_dir=/usr/local/nvidia/lib64 shim=/tmp/work/cuda-driver-shim.cmake\n"}
+,{"stream_name":"stdout","time":19.079112355,"data":"=== STAGE cuda_driver OK 0.0s\n"}
+,{"stream_name":"stdout","time":19.079483059,"data":"=== STAGE extract_kvmem start\n"}
+,{"stream_name":"stdout","time":84.814053226,"data":"=== STAGE extract_kvmem OK 65.7s\n"}
+,{"stream_name":"stdout","time":84.814416878,"data":"=== STAGE prepare_ninfer start\n"}
+,{"stream_name":"stdout","time":84.814553451,"data":"+ git init /tmp/work/kvmem/backends/ninfer\n"}
+,{"stream_name":"stdout","time":84.864658189,"data":"+ git -C /tmp/work/kvmem/backends/ninfer remote add origin https://github.com/iamwavecut/ninfer-all.git\n"}
+,{"stream_name":"stdout","time":84.870440676,"data":"+ git -C /tmp/work/kvmem/backends/ninfer fetch --depth 1 origin 6cc1f9fa438b7094685ae417dfa40e1ca324e617\n"}
+,{"stream_name":"stdout","time":87.363030962,"data":"+ git -C /tmp/work/kvmem/backends/ninfer checkout --detach 6cc1f9fa438b7094685ae417dfa40e1ca324e617\n"}
+,{"stream_name":"stdout","time":87.86366288,"data":"+ git -C /tmp/work/kvmem/backends/ninfer rev-parse HEAD\n"}
+,{"stream_name":"stdout","time":87.865960877,"data":"+ git -C /tmp/work/kvmem init\n"}
+,{"stream_name":"stdout","time":87.870147603,"data":"+ git -C /tmp/work/kvmem add -A\n"}
+,{"stream_name":"stdout","time":88.658231186,"data":"+ git -C /tmp/work/kvmem commit -m kvmem snapshot\n"}
+,{"stream_name":"stdout","time":88.787132759,"data":"+ /usr/bin/python3 scripts/prepare-backends.py --backend ninfer\n"}
+,{"stream_name":"stdout","time":136.583697996,"data":"=== STAGE prepare_ninfer OK 51.8s\n"}
+,{"stream_name":"stdout","time":136.584083255,"data":"=== STAGE acquire_model start\n"}
+,{"stream_name":"stdout","time":137.726759958,"data":"no artifact mounted; converting from GGUF in this kernel\n"}
+,{"stream_name":"stdout","time":137.726787716,"data":"+ /usr/bin/python3 -m pip install -q gguf\n"}
+,{"stream_name":"stderr","time":141.364360939,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":160.394849678,"data":"\rFetching 9 files:   0%|          | 0/9 [00:00\u003c?, ?it/s]\rFetching 9 files:  22%|██▏       | 2/9 [00:00\u003c00:00, 14.58it/s]\rFetching 9 files:  78%|███████▊  | 7/9 [00:00\u003c00:00, 30.73it/s]\rFetching 9 files: 100%|██████████| 9/9 [00:00\u003c00:00, 16.75it/s]\n"}
+,{"stream_name":"stdout","time":160.395271737,"data":"+ /usr/bin/python3 -m tools.convert --model /tmp/work/model_src/Qwen3.5-4B-config --recipe qwen3_5_dense_gguf --components text,mtp --source gguf=/tmp/work/model_src/Qwen3.5-4B-Q4_K_M.gguf --device cpu --out /tmp/work/qwen3_5_4b_mtp.ninfer\n"}
+,{"stream_name":"stdout","time":184.275686273,"data":"=== STAGE acquire_model OK 47.7s\n"}
+,{"stream_name":"stdout","time":184.276227645,"data":"=== STAGE fetch_media start\n"}
+,{"stream_name":"stdout","time":184.276242012,"data":"+ bash scripts/fetch-media-sources.sh\n"}
+,{"stream_name":"stdout","time":187.334455616,"data":"=== STAGE fetch_media OK 3.1s\n"}
+,{"stream_name":"stdout","time":187.334959275,"data":"=== STAGE configure start\n"}
+,{"stream_name":"stdout","time":187.334988129,"data":"+ cmake -S /tmp/work/kvmem/backends/ninfer -B /tmp/work/kvmem/backends/ninfer/build-sm75 -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_CUDA_ARCHITECTURES=75 -DNINFER_BUILD_APPS=ON -DCMAKE_LIBRARY_PATH=/usr/local/nvidia/lib64 -DCMAKE_PROJECT_INCLUDE=/tmp/work/cuda-driver-shim.cmake\n"}
+,{"stream_name":"stdout","time":193.374109712,"data":"=== STAGE configure OK 6.0s\n"}
+,{"stream_name":"stdout","time":193.374555633,"data":"=== STAGE build start\n"}
+,{"stream_name":"stdout","time":193.374575958,"data":"+ cmake --build /tmp/work/kvmem/backends/ninfer/build-sm75 --parallel 4\n"}
+,{"stream_name":"stdout","time":16251.951875446,"data":"=== STAGE build OK 16058.6s\n"}
+,{"stream_name":"stdout","time":16251.952674916,"data":"=== STAGE scan_matrix start\n"}
+,{"stream_name":"stdout","time":16251.99241366,"data":"+ /tmp/work/kvmem/backends/ninfer/build-sm75/apps/ninfer-serve /tmp/work/qwen3_5_4b_mtp.ninfer --no-webui --host 127.0.0.1 --port 18080 --kv-dtype bf16 --max-concurrency 1 --kv-capacity 8192 --max-context 8192 --host-cache-mib 2048\n"}
+,{"stream_name":"stdout","time":16275.749326139,"data":"+ /tmp/work/kvmem/backends/ninfer/build-sm75/apps/ninfer-serve /tmp/work/qwen3_5_4b_mtp.ninfer --no-webui --host 127.0.0.1 --port 18080 --kv-dtype bf16 --max-concurrency 1 --kv-capacity 16384 --max-context 8192 --host-cache-mib 2048\n"}
+,{"stream_name":"stdout","time":16292.809728208,"data":"+ /tmp/work/kvmem/backends/ninfer/build-sm75/apps/ninfer-serve /tmp/work/qwen3_5_4b_mtp.ninfer --no-webui --host 127.0.0.1 --port 18080 --kv-dtype bf16 --max-concurrency 1 --kv-capacity 32768 --max-context 8192 --host-cache-mib 2048\n"}
+,{"stream_name":"stdout","time":16307.188970049,"data":"+ /tmp/work/kvmem/backends/ninfer/build-sm75/apps/ninfer-serve /tmp/work/qwen3_5_4b_mtp.ninfer --no-webui --host 127.0.0.1 --port 18080 --kv-dtype bf16 --max-concurrency 1 --kv-capacity 65536 --max-context 8192 --host-cache-mib 2048\n"}
+,{"stream_name":"stdout","time":16321.690732689,"data":"+ /tmp/work/kvmem/backends/ninfer/build-sm75/apps/ninfer-serve /tmp/work/qwen3_5_4b_mtp.ninfer --no-webui --host 127.0.0.1 --port 18080 --kv-dtype bf16 --max-concurrency 1 --kv-capacity 131072 --max-context 8192 --host-cache-mib 2048\n"}
+,{"stream_name":"stdout","time":16336.224876858,"data":"+ /tmp/work/kvmem/backends/ninfer/build-sm75/apps/ninfer-serve /tmp/work/qwen3_5_4b_mtp.ninfer --no-webui --host 127.0.0.1 --port 18080 --kv-dtype bf16 --max-concurrency 1 --kv-capacity 32768 --max-context 32768 --host-cache-mib 2048\n"}
+,{"stream_name":"stdout","time":16371.307381406,"data":"+ /tmp/work/kvmem/backends/ninfer/build-sm75/apps/ninfer-serve /tmp/work/qwen3_5_4b_mtp.ninfer --no-webui --host 127.0.0.1 --port 18080 --kv-dtype bf16 --max-concurrency 1 --kv-capacity 65536 --max-context 32768 --host-cache-mib 2048\n"}
+,{"stream_name":"stdout","time":16407.332103593,"data":"+ /tmp/work/kvmem/backends/ninfer/build-sm75/apps/ninfer-serve /tmp/work/qwen3_5_4b_mtp.ninfer --no-webui --host 127.0.0.1 --port 18080 --kv-dtype bf16 --max-concurrency 1 --kv-capacity 131072 --max-context 32768 --host-cache-mib 2048\n"}
+,{"stream_name":"stdout","time":16444.442877953,"data":"+ /tmp/work/kvmem/backends/ninfer/build-sm75/apps/ninfer-serve /tmp/work/qwen3_5_4b_mtp.ninfer --no-webui --host 127.0.0.1 --port 18080 --kv-dtype bf16 --max-concurrency 1 --kv-capacity 131072 --max-context 131072 --host-cache-mib 2048\n"}
+,{"stream_name":"stdout","time":16525.998108341,"data":"+ /tmp/work/kvmem/backends/ninfer/build-sm75/apps/ninfer-serve /tmp/work/qwen3_5_4b_mtp.ninfer --no-webui --host 127.0.0.1 --port 18080 --kv-dtype bf16 --max-concurrency 1 --kv-capacity 65536 --max-context 32768 --host-cache-mib 64\n"}
+,{"stream_name":"stdout","time":16558.813462711,"data":"+ /tmp/work/kvmem/backends/ninfer/build-sm75/apps/ninfer-serve /tmp/work/qwen3_5_4b_mtp.ninfer --no-webui --host 127.0.0.1 --port 18080 --kv-dtype bf16 --max-concurrency 1 --kv-capacity 65536 --max-context 32768 --host-cache-mib 512\n"}
+,{"stream_name":"stdout","time":16593.895794115,"data":"+ /tmp/work/kvmem/backends/ninfer/build-sm75/apps/ninfer-serve /tmp/work/qwen3_5_4b_mtp.ninfer --no-webui --host 127.0.0.1 --port 18080 --kv-dtype bf16 --max-concurrency 1 --kv-capacity 65536 --max-context 32768 --host-cache-mib 2048\n"}
+,{"stream_name":"stdout","time":16630.981222661,"data":"+ /tmp/work/kvmem/backends/ninfer/build-sm75/apps/ninfer-serve /tmp/work/qwen3_5_4b_mtp.ninfer --no-webui --host 127.0.0.1 --port 18080 --kv-dtype bf16 --max-concurrency 1 --kv-capacity 65536 --max-context 32768 --host-cache-mib 8192\n"}
+,{"stream_name":"stdout","time":16682.775883359,"data":"+ /tmp/work/kvmem/backends/ninfer/build-sm75/apps/ninfer-serve /tmp/work/qwen3_5_4b_mtp.ninfer --no-webui --host 127.0.0.1 --port 18080 --kv-dtype int8 --kv-capacity auto --kv-headroom-mib 1024 --max-context 8192 --max-concurrency 1\n"}
+,{"stream_name":"stdout","time":16705.973635552,"data":"+ /tmp/work/kvmem/backends/ninfer/build-sm75/apps/ninfer-serve /tmp/work/qwen3_5_4b_mtp.ninfer --no-webui --host 127.0.0.1 --port 18080 --kv-dtype int8 --kv-capacity auto --kv-headroom-mib 512 --max-context 8192 --max-concurrency 1\n"}
+,{"stream_name":"stdout","time":16729.190514572,"data":"=== STAGE scan_matrix OK 477.2s\n"}
+,{"stream_name":"stdout","time":16729.200650936,"data":"DONE\n"}
+,{"stream_name":"stderr","time":16731.936609407,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":16731.936640281,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":16732.274732013,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":16732.274755675,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":16733.53798016,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":16734.75384508,"data":"[NbConvertApp] Writing 424037 bytes to __results__.html\n"}
+]

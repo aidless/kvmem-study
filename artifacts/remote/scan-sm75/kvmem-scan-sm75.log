@@ -1,0 +1,77 @@
+[{"stream_name":"stdout","time":1.0722604040000001,"data":"=== STAGE probe_toolchain start\n"}
+,{"stream_name":"stdout","time":1.072290749,"data":"+ nvidia-smi -L\n"}
+,{"stream_name":"stdout","time":1.132891819,"data":"+ nvcc --version\n"}
+,{"stream_name":"stdout","time":1.158968835,"data":"+ gcc --version\n"}
+,{"stream_name":"stdout","time":1.188458517,"data":"+ cmake --version\n"}
+,{"stream_name":"stdout","time":1.5844195779999999,"data":"+ ninja --version\n"}
+,{"stream_name":"stdout","time":1.59141636,"data":"+ free -g\n"}
+,{"stream_name":"stdout","time":1.6171353050000001,"data":"+ df -h /tmp\n"}
+,{"stream_name":"stdout","time":1.620624074,"data":"+ ninja --version\n"}
+,{"stream_name":"stdout","time":1.622713138,"data":"{\n"}
+,{"stream_name":"stdout","time":1.622727143,"data":"  \"nvidia_smi\": \"GPU 0: Tesla T4 (UUID: GPU-d3b810cd-2fa1-607b-f852-9ebba4edbcc9)\",\n"}
+,{"stream_name":"stdout","time":1.62273172,"data":"  \"nvcc\": \"nvcc: NVIDIA (R) Cuda compiler driver\",\n"}
+,{"stream_name":"stdout","time":1.622735394,"data":"  \"gcc\": \"gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0\",\n"}
+,{"stream_name":"stdout","time":1.622739037,"data":"  \"cmake\": \"cmake version 3.31.10\",\n"}
+,{"stream_name":"stdout","time":1.622742568,"data":"  \"ninja\": \"1.13.2.git.kitware.jobserver-pipe-1\",\n"}
+,{"stream_name":"stdout","time":1.622746115,"data":"  \"mem\": \"total        used        free      shared  buff/cache   available\\nMem:              31           1          26           0           4          30\\nSwap:              0           0           0\",\n"}
+,{"stream_name":"stdout","time":1.622751626,"data":"  \"disk_tmp\": \"Filesystem      Size  Used Avail Use% Mounted on\\noverlay         8.0T  7.1T  967G  89% /\"\n"}
+,{"stream_name":"stdout","time":1.6227554830000002,"data":"}\n"}
+,{"stream_name":"stdout","time":1.622758728,"data":"=== STAGE probe_toolchain OK 0.6s\n"}
+,{"stream_name":"stdout","time":1.623015839,"data":"=== STAGE ensure_media_tools start\n"}
+,{"stream_name":"stdout","time":1.623025906,"data":"+ which meson\n"}
+,{"stream_name":"stdout","time":1.631037552,"data":"+ which ninja\n"}
+,{"stream_name":"stdout","time":1.632291948,"data":"+ which make\n"}
+,{"stream_name":"stdout","time":1.6337780579999999,"data":"+ which nasm\n"}
+,{"stream_name":"stdout","time":1.635258214,"data":"+ which pkg-config\n"}
+,{"stream_name":"stdout","time":1.636587155,"data":"+ /usr/bin/python3 -m pip install -q meson\n"}
+,{"stream_name":"stdout","time":6.913638135,"data":"+ apt-get update -qq\n"}
+,{"stream_name":"stdout","time":13.382000301,"data":"+ apt-get install -y -qq nasm\n"}
+,{"stream_name":"stdout","time":21.586547627,"data":"+ which meson\n"}
+,{"stream_name":"stdout","time":21.587991355,"data":"+ which ninja\n"}
+,{"stream_name":"stdout","time":21.589264417,"data":"+ which make\n"}
+,{"stream_name":"stdout","time":21.590469195,"data":"+ which nasm\n"}
+,{"stream_name":"stdout","time":21.59176345,"data":"=== STAGE ensure_media_tools OK 20.0s\n"}
+,{"stream_name":"stdout","time":21.592088334,"data":"=== STAGE cuda_driver start\n"}
+,{"stream_name":"stdout","time":21.595872263,"data":"{\n"}
+,{"stream_name":"stdout","time":21.595886544,"data":"  \"dirs\": {\n"}
+,{"stream_name":"stdout","time":21.595890629,"data":"    \"/usr/local/cuda/lib64\": [],\n"}
+,{"stream_name":"stdout","time":21.595894135,"data":"    \"/usr/local/cuda/lib\": null,\n"}
+,{"stream_name":"stdout","time":21.595897646,"data":"    \"/usr/local/cuda/lib64/stubs\": [],\n"}
+,{"stream_name":"stdout","time":21.595901351,"data":"    \"/usr/local/cuda/lib/stubs\": null,\n"}
+,{"stream_name":"stdout","time":21.595915882,"data":"    \"/usr/local/cuda/targets/x86_64-linux/lib\": [],\n"}
+,{"stream_name":"stdout","time":21.595918591,"data":"    \"/usr/local/cuda/targets/x86_64-linux/lib/stubs\": [],\n"}
+,{"stream_name":"stdout","time":21.595920863,"data":"    \"/usr/lib/x86_64-linux-gnu\": [],\n"}
+,{"stream_name":"stdout","time":21.595923204,"data":"    \"/usr/lib64\": [],\n"}
+,{"stream_name":"stdout","time":21.595925411,"data":"    \"/usr/lib\": []\n"}
+,{"stream_name":"stdout","time":21.59592764,"data":"  },\n"}
+,{"stream_name":"stdout","time":21.595929793,"data":"  \"versioned\": [],\n"}
+,{"stream_name":"stdout","time":21.595932129,"data":"  \"unversioned\": []\n"}
+,{"stream_name":"stdout","time":21.595934399,"data":"}\n"}
+,{"stream_name":"stdout","time":21.59741379,"data":"=== STAGE cuda_driver FAIL: no libcuda.so in the image; src/core/CMakeLists.txt:51 links against it. Probed: {\"/usr/local/cuda/lib64\": [], \"/usr/local/cuda/lib\": null, \"/usr/local/cuda/lib64/stubs\": [], \"/usr/local/cuda/lib/stubs\": null, \"/usr/local/cuda/targets/x86_64-linux/lib\": [], \"/usr/local/cuda/targets/x86_64-linux/lib/stubs\": [], \"/usr/lib/x86_64-linux-gnu\": [], \"/usr/lib64\": [], \"/usr/lib\": []}\n"}
+,{"stream_name":"stdout","time":21.597430343,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":21.597433132,"data":"  File \"/kaggle/src/script.py\", line 84, in run\n"}
+,{"stream_name":"stdout","time":21.597435473,"data":"    out = fn(*a, **k)\n"}
+,{"stream_name":"stdout","time":21.597437618,"data":"  File \"/kaggle/src/script.py\", line 319, in ensure_cuda_driver\n"}
+,{"stream_name":"stdout","time":21.597439955,"data":"    raise RuntimeError(\"no libcuda.so in the image; src/core/CMakeLists.txt:51 links against \"\n"}
+,{"stream_name":"stdout","time":21.597442444,"data":"                       f\"it. Probed: {json.dumps(probe['dirs'])}\")\n"}
+,{"stream_name":"stdout","time":21.597444895,"data":"RuntimeError: no libcuda.so in the image; src/core/CMakeLists.txt:51 links against it. Probed: {\"/usr/local/cuda/lib64\": [], \"/usr/local/cuda/lib\": null, \"/usr/local/cuda/lib64/stubs\": [], \"/usr/local/cuda/lib/stubs\": null, \"/usr/local/cuda/targets/x86_64-linux/lib\": [], \"/usr/local/cuda/targets/x86_64-linux/lib/stubs\": [], \"/usr/lib/x86_64-linux-gnu\": [], \"/usr/lib64\": [], \"/usr/lib\": []}\n"}
+,{"stream_name":"stdout","time":21.597448195,"data":"\n"}
+,{"stream_name":"stderr","time":21.598163573,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":21.598679474,"data":"  File \"/kaggle/src/script.py\", line 617, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":21.598690985,"data":"    main()\n"}
+,{"stream_name":"stderr","time":21.598694662,"data":"    ~~~~^^\n"}
+,{"stream_name":"stderr","time":21.598697982,"data":"  File \"/kaggle/src/script.py\", line 593, in main\n"}
+,{"stream_name":"stderr","time":21.598705568,"data":"    driver = ensure_cuda_driver()\n"}
+,{"stream_name":"stderr","time":21.598708147,"data":"  File \"/kaggle/src/script.py\", line 84, in run\n"}
+,{"stream_name":"stderr","time":21.598710497,"data":"    out = fn(*a, **k)\n"}
+,{"stream_name":"stderr","time":21.598712672,"data":"  File \"/kaggle/src/script.py\", line 319, in ensure_cuda_driver\n"}
+,{"stream_name":"stderr","time":21.59871509,"data":"    raise RuntimeError(\"no libcuda.so in the image; src/core/CMakeLists.txt:51 links against \"\n"}
+,{"stream_name":"stderr","time":21.598717624,"data":"                       f\"it. Probed: {json.dumps(probe['dirs'])}\")\n"}
+,{"stream_name":"stderr","time":21.598722049,"data":"RuntimeError: no libcuda.so in the image; src/core/CMakeLists.txt:51 links against it. Probed: {\"/usr/local/cuda/lib64\": [], \"/usr/local/cuda/lib\": null, \"/usr/local/cuda/lib64/stubs\": [], \"/usr/local/cuda/lib/stubs\": null, \"/usr/local/cuda/targets/x86_64-linux/lib\": [], \"/usr/local/cuda/targets/x86_64-linux/lib/stubs\": [], \"/usr/lib/x86_64-linux-gnu\": [], \"/usr/lib64\": [], \"/usr/lib\": []}\n"}
+,{"stream_name":"stderr","time":23.734687582,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":23.734724082,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":24.073625217,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":24.073653018,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":25.036904165,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":26.191174153,"data":"[NbConvertApp] Writing 401076 bytes to __results__.html\n"}
+]

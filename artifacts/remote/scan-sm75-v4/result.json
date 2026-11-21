@@ -1,0 +1,120 @@
+{
+  "stages": {
+    "probe_toolchain": {
+      "ok": true,
+      "seconds": 0.4,
+      "detail": {
+        "nvidia_smi": "GPU 0: Tesla T4 (UUID: GPU-e194c54c-c24e-d1a9-d983-44347f7973ce)",
+        "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver",
+        "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "cmake": "cmake version 3.31.10",
+        "ninja": "1.13.2.git.kitware.jobserver-pipe-1",
+        "mem": "total        used        free      shared  buff/cache   available\nMem:              31           1          26           0           4          30\nSwap:              0           0           0",
+        "disk_tmp": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         8.0T  7.1T  967G  89% /"
+      }
+    },
+    "ensure_media_tools": {
+      "ok": true,
+      "seconds": 19.7,
+      "detail": {
+        "meson": "/usr/local/bin/meson",
+        "ninja": "/usr/local/bin/ninja",
+        "make": "/usr/bin/make",
+        "nasm": "/usr/bin/nasm"
+      }
+    },
+    "cuda_driver": {
+      "ok": true,
+      "seconds": 0.0,
+      "detail": {
+        "libcuda": "/usr/local/nvidia/lib64/libcuda.so",
+        "link_dir": "/usr/local/nvidia/lib64",
+        "shim": "/tmp/work/cuda-driver-shim.cmake",
+        "probe": {
+          "dirs": {
+            "/usr/local/nvidia/lib64": [
+              "libcuda.so",
+              "libcuda.so.1",
+              "libcuda.so.580.178.04"
+            ],
+            "/usr/local/nvidia/lib": null,
+            "/usr/local/cuda/lib64": [],
+            "/usr/local/cuda/lib": null,
+            "/usr/local/cuda/lib64/stubs": [],
+            "/usr/local/cuda/lib/stubs": null,
+            "/usr/local/cuda/targets/x86_64-linux/lib": [],
+            "/usr/local/cuda/targets/x86_64-linux/lib/stubs": [],
+            "/usr/lib/x86_64-linux-gnu": [],
+            "/usr/lib64": [],
+            "/usr/lib": [],
+            "/opt/conda/lib": null,
+            "/usr/local/lib": []
+          },
+          "versioned": [
+            "/usr/local/nvidia/lib64/libcuda.so.1",
+            "/usr/local/nvidia/lib64/libcuda.so.580.178.04"
+          ],
+          "unversioned": [
+            "/usr/local/nvidia/lib64/libcuda.so"
+          ]
+        }
+      }
+    },
+    "extract_kvmem": {
+      "ok": true,
+      "seconds": 58.4,
+      "detail": {
+        "tree": "/tmp/work/kvmem",
+        "source": "/kaggle/input/datasets/<kaggle-user>/kvmem-src/kvmem-master",
+        "version": "0.19.0"
+      }
+    },
+    "prepare_ninfer": {
+      "ok": true,
+      "seconds": 50.1,
+      "detail": {
+        "head": "6cc1f9fa438b7094685ae417dfa40e1ca324e617"
+      }
+    },
+    "acquire_model": {
+      "ok": true,
+      "seconds": 51.4,
+      "detail": {
+        "path": "/tmp/work/qwen3_5_4b_mtp.ninfer",
+        "bytes": 2827176704,
+        "source": "converted",
+        "gguf_sha256": "3874209241c9a397e2f62cd3f70f80fd2dfbf0dfccb6838416bdb48a714e8630",
+        "generation_config": "minimal {\"eos_token_id\": 248044} from official Qwen/Qwen3.5-4B config.json"
+      }
+    },
+    "fetch_media": {
+      "ok": true,
+      "seconds": 5.8,
+      "detail": {
+        "seconds": 5.8
+      }
+    },
+    "configure": {
+      "ok": true,
+      "seconds": 5.0,
+      "detail": {
+        "build_dir": "/tmp/work/kvmem/backends/ninfer/build-sm75",
+        "cache": {
+          "CMAKE_BUILD_TYPE": "Release",
+          "CMAKE_CUDA_ARCHITECTURES": "75",
+          "CMAKE_CUDA_COMPILER": "/usr/local/cuda/bin/nvcc",
+          "CMAKE_CXX_COMPILER": "/usr/bin/c++"
+        }
+      }
+    },
+    "build": {
+      "ok": false,
+      "seconds": 14400.1,
+      "error": "RuntimeError: timeout after 14400s: ['cmake', '--build', '/tmp/work/kvmem/backends/ninfer/build-sm75', '--parallel', '4']\n_w3_h24_cached.cu.o\n[648/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w3_h24_append.cu.o\n[649/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w3_h16_append.cu.o\n[650/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w3_h16_cached.cu.o\n[651/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w4_h24_cached.cu.o\n[652/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w4_h24_append.cu.o\n[653/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w4_h16_cached.cu.o\n[654/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w4_h16_append.cu.o\n[655/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w5_h24_cached.cu.o\n[656/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w5_h24_append.cu.o\n[657/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w5_h16_cached.cu.o\n[658/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w5_h16_append.cu.o\n[659/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w6_h24_cached.cu.o\n[660/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w6_h24_append.cu.o\n[661/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w6_h16_cached.cu.o\n[662/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w6_h16_append.cu.o\n",
+      "trace": "Traceback (most recent call last):\n  File \"/kaggle/src/script.py\", line 123, in sh\n    r = subprocess.run(cmd, cwd=cwd, env=env, timeout=timeout, capture_output=True, text=True)\n  File \"/usr/lib/python3.13/subprocess.py\", line 557, in run\n    stdout, stderr = process.communicate(input, timeout=timeout)\n                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.13/subprocess.py\", line 1223, in communicate\n    stdout, stderr = self._communicate(input, endtime, timeout)\n                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.13/subprocess.py\", line 2156, in _communicate\n    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.13/subprocess.py\", line 1270, in _check_timeout\n    raise TimeoutExpired(\n    ...<2 lines>...\n            stderr=b''.join(stderr_seq) if stderr_seq else None)\nsubprocess.TimeoutExpired: Command '['cmake', '--build', '/tmp/work/kvmem/backends/ninfer/build-sm75', '--parallel', '4']' timed out after 14400 seconds\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/kaggle/src/script.py\", line 101, in run\n    out = fn(*a, **k)\n  File \"/kaggle/src/script.py\", line 456, in build\n    sh([\"cmake\", \"--build\", cfg[\"build_dir\"], \"--parallel\", str(os.cpu_count() or 4)], timeout=14400)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/kaggle/src/script.py\", line 126, in sh\n    raise RuntimeError(f\"timeout after {timeout}s: {cmd}\\n{tail}\")\nRuntimeError: timeout after 14400s: ['cmake', '--build', '/tmp/work/kvmem/backends/ninfer/build-sm75', '--parallel', '4']\n_w3_h24_cached.cu.o\n[648/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w3_h24_append.cu.o\n[649/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w3_h16_append.cu.o\n[650/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w3_h16_cached.cu.o\n[651/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w4_h24_cached.cu.o\n[652/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w4_h24_append.cu.o\n[653/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w4_h16_cached.cu.o\n[654/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w4_h16_append.cu.o\n[655/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w5_h24_cached.cu.o\n[656/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w5_h24_append.cu.o\n[657/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w5_h16_cached.cu.o\n[658/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w5_h16_append.cu.o\n[659/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w6_h24_cached.cu.o\n[660/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w6_h24_append.cu.o\n[661/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w6_h16_cached.cu.o\n[662/943] Building CUDA object src/ops/CMakeFiles/ninfer_ops.dir/softmax_attention/dense/causal_cache/small_t_i8_w6_h16_append.cu.o\n\n"
+    }
+  },
+  "ok": false,
+  "arch": "75",
+  "t0": "2026-11-18T02:18:29Z"
+}

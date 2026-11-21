@@ -1,0 +1,36 @@
+{
+  "stages": {
+    "probe_toolchain": {
+      "ok": true,
+      "seconds": 0.6,
+      "detail": {
+        "nvidia_smi": "GPU 0: Tesla T4 (UUID: GPU-d3b810cd-2fa1-607b-f852-9ebba4edbcc9)",
+        "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver",
+        "gcc": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "cmake": "cmake version 3.31.10",
+        "ninja": "1.13.2.git.kitware.jobserver-pipe-1",
+        "mem": "total        used        free      shared  buff/cache   available\nMem:              31           1          26           0           4          30\nSwap:              0           0           0",
+        "disk_tmp": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         8.0T  7.1T  967G  89% /"
+      }
+    },
+    "ensure_media_tools": {
+      "ok": true,
+      "seconds": 20.0,
+      "detail": {
+        "meson": "/usr/local/bin/meson",
+        "ninja": "/usr/local/bin/ninja",
+        "make": "/usr/bin/make",
+        "nasm": "/usr/bin/nasm"
+      }
+    },
+    "cuda_driver": {
+      "ok": false,
+      "seconds": 0.0,
+      "error": "RuntimeError: no libcuda.so in the image; src/core/CMakeLists.txt:51 links against it. Probed: {\"/usr/local/cuda/lib64\": [], \"/usr/local/cuda/lib\": null, \"/usr/local/cuda/lib64/stubs\": [], \"/usr/local/cuda/lib/stubs\": null, \"/usr/local/cuda/targets/x86_64-linux/lib\": [], \"/usr/local/cuda/targets/x86_64-linux/lib/stubs\": [], \"/usr/lib/x86_64-linux-gnu\": [], \"/usr/lib64\": [], \"/usr/lib\": []}",
+      "trace": "Traceback (most recent call last):\n  File \"/kaggle/src/script.py\", line 84, in run\n    out = fn(*a, **k)\n  File \"/kaggle/src/script.py\", line 319, in ensure_cuda_driver\n    raise RuntimeError(\"no libcuda.so in the image; src/core/CMakeLists.txt:51 links against \"\n                       f\"it. Probed: {json.dumps(probe['dirs'])}\")\nRuntimeError: no libcuda.so in the image; src/core/CMakeLists.txt:51 links against it. Probed: {\"/usr/local/cuda/lib64\": [], \"/usr/local/cuda/lib\": null, \"/usr/local/cuda/lib64/stubs\": [], \"/usr/local/cuda/lib/stubs\": null, \"/usr/local/cuda/targets/x86_64-linux/lib\": [], \"/usr/local/cuda/targets/x86_64-linux/lib/stubs\": [], \"/usr/lib/x86_64-linux-gnu\": [], \"/usr/lib64\": [], \"/usr/lib\": []}\n"
+    }
+  },
+  "ok": false,
+  "arch": "75",
+  "t0": "2026-11-16T15:27:46Z"
+}

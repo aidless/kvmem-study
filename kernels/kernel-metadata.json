@@ -1,0 +1,12 @@
+{
+  "id": "<kaggle-user>/kvmem-convert-qwen35-4b",
+  "title": "kvmem-convert-qwen35-4b",
+  "code_file": "convert_kernel.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": ["<kaggle-user>/kvmem-src"]
+}

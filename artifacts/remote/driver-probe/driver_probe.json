@@ -1,0 +1,67 @@
+{
+  "driver": {
+    "dirs": {
+      "/usr/local/nvidia/lib64": [
+        "libcuda.so",
+        "libcuda.so.1",
+        "libcuda.so.580.178.04",
+        "libcudadebugger.so.1",
+        "libcudadebugger.so.580.178.04",
+        "libnvidia-ml.so",
+        "libnvidia-ml.so.1",
+        "libnvidia-ml.so.580.178.04"
+      ],
+      "/usr/local/nvidia/lib": [],
+      "/usr/local/nvidia": [],
+      "/usr/lib/x86_64-linux-gnu": [],
+      "/usr/lib64": [],
+      "/usr/lib": [],
+      "/usr/local/cuda/lib64/stubs": [],
+      "/usr/local/cuda/targets/x86_64-linux/lib/stubs": [],
+      "/opt/conda/lib": [],
+      "/usr/local/lib": []
+    },
+    "find": {
+      "cmd": "find / -xdev -name 'libcuda*' -o -xdev -name 'libnvidia-ml*' 2>/dev/null | grep -v '^/proc' | head -40",
+      "rc": 0,
+      "out": "/root/.julia/packages/CUDACore/6N8AA/src/device/intrinsics/libcudadevrt_common.jl\n/root/.julia/packages/CUDACore/6N8AA/src/device/intrinsics/libcudadevrt.jl\n/root/.julia/packages/CUDACore/6N8AA/lib/cudadrv/libcuda.jl\n/root/.julia/packages/CUDACore/6N8AA/lib/cudadrv/libcuda_deprecated.jl\n/root/.julia/packages/CUDACore/GtzaO/src/device/intrinsics/libcudadevrt_common.jl\n/root/.julia/packages/CUDACore/GtzaO/src/device/intrinsics/libcudadevrt.jl\n/root/.julia/packages/CUDACore/GtzaO/lib/cudadrv/libcuda.jl\n/root/.julia/packages/CUDACore/GtzaO/lib/cudadrv/libcuda_deprecated.jl\n/root/.julia/packages/CUDA/nBYpB/CUDACore/src/device/intrinsics/libcudadevrt_common.jl\n/root/.julia/packages/CUDA/nBYpB/CUDACore/src/device/intrinsics/libcudadevrt.jl\n/root/.julia/packages/CUDA/nBYpB/CUDACore/lib/cudadrv/libcuda.jl\n/root/.julia/packages/CUDA/nBYpB/CUDACore/lib/cudadrv/libcuda_deprecated.jl\n/root/.julia/packages/CUDA/nBYpB/res/wrap/libcuda_prologue.jl\n/root/.julia/packages/CUDA/3Opfa/CUDACore/src/device/intrinsics/libcudadevrt_common.jl\n/root/.julia/packages/CUDA/3Opfa/CUDACore/src/device/intrinsics/libcudadevrt.jl\n/root/.julia/packages/CUDA/3Opfa/CUDACore/lib/cudadrv/libcuda.jl\n/root/.julia/packages/CUDA/3Opfa/CUDACore/lib/cudadrv/libcuda_deprecated.jl\n/root/.julia/packages/CUDA/3Opfa/res/wrap/libcuda_prologue.jl\n/root/.julia/artifacts/5bf47e8b1f0daf3dafb58ff7f319899fecdd4372/lib/libcuda.so.1\n/root/.julia/artifacts/5bf47e8b1f0daf3dafb58ff7f319899fecdd4372/lib/libcudadebugger.so.610.57.04\n/root/.julia/artifacts/5bf47e8b1f0daf3dafb58ff7f319899fecdd4372/lib/libcuda.so\n/root/.julia/artifacts/5bf47e8b1f0daf3dafb58ff7f319899fecdd4372/lib/libcudadebugger.so.1\n/root/.julia/artifacts/5bf47e8b1f0daf3dafb58ff7f319899fecdd4372/lib/libcuda.so.610.57.04\n/root/.julia/artifacts/3cd7a8e8fe264178b19b591f55b041d2018717a7/lib/libcudadevrt.a\n/root/.julia/artifacts/2c8e4324b86fc70a7c041ce8dc72b5f9b41a7a98/lib/libcuda.so.1\n/root/.julia/artifacts/2c8e4324b86fc70a7c041ce8dc72b5f9b41a7a98/lib/libcuda.so.610.43.02\n/root/.julia/artifacts/2c8e4324b86fc70a7c041ce8dc72b5f9b41a7a98/lib/libcuda.so\n/root/.julia/artifacts/2c8e4324b86fc70a7c041ce8dc72b5f9b41a7a98/lib/libcudadebugger.so.1\n/root/.julia/artifacts/2c8e4324b86fc70a7c041ce8dc72b5f9b41a7a98/lib/libcudadebugger.so.610.43.02\n/opt/nvidia/nsight-compute/2025.3.1/target/linux-desktop-glibc_2_11_3-x64/libcuda-injection.so\n/opt/nvidia/nsight-compute/2025.3.1/target/linux-desktop-t210-a64/libcuda-injection.so\n/usr/local/lib/python3.13/dist-packages/tensorflow/include/third_party/gpus/cuda/libcudacxx\n/usr/local/lib/python3.13/dist-packages/tensorflow/include/external/cuda_cccl/libcudacxx\n/usr/local/lib/python3.13/dist-packages/libcugraph/lib64/rapids/cmake/libcudacxx\n/usr/local/lib/python3.13/dist-packages/libcugraph/lib64/rapids/cmake/libcudacxx/libcudacxx-config.cmake\n/usr/local/lib/python3.13/dist-packages/libcugraph/lib64/rapids/cmake/libcudacxx/libcudacxx-config-version.cmake\n/usr/local/lib/python3.13/dist-packages/libcugraph/lib64/rapids/cmake/libcudacxx/libcudacxx-header-search.cmake\n/usr/local/lib/python3.13/dist-packages/libcudf/lib64/rapids/cmake/libcudacxx\n/usr/local/lib/python3.13/dist-packages/libcudf/lib64/rapids/cmake/libcudacxx/libcudacxx-config.cmake\n/usr/local/lib/python3.13/dist-packages/libcudf/lib64/rapids/cmake/libcudacxx/libcudacxx-config-version.cmake",
+      "err": ""
+    },
+    "ldconfig": {
+      "cmd": "ldconfig -p 2>/dev/null | grep -i -E 'libcuda|libnvidia-ml' | head -20",
+      "rc": 0,
+      "out": "libcudart.so.13 (libc6,x86-64) => /usr/local/cuda/targets/x86_64-linux/lib/libcudart.so.13\n\tlibcudart.so (libc6,x86-64) => /usr/local/cuda/targets/x86_64-linux/lib/libcudart.so",
+      "err": ""
+    }
+  },
+  "ctypes": {
+    "loaded": true,
+    "handle": "libcuda.so.1",
+    "maps": [
+      "/usr/local/nvidia/lib64/libcuda.so.580.178.04"
+    ],
+    "cuInit_rc": 0,
+    "cuDeviceGet_rc": 0,
+    "cuDeviceGetName_rc": 0,
+    "device_name": "Tesla T4"
+  },
+  "symlink": {
+    "from": "/usr/local/nvidia/lib64/libcuda.so.580.178.04",
+    "to": "/tmp/work/cuda-stub/libcuda.so"
+  },
+  "link_test": {
+    "stub_dir": "/tmp/work/cuda-stub",
+    "build": {
+      "cmd": "nvcc -arch=sm_75 -o /tmp/work/driver_probe /tmp/work/driver_probe.cu -lcuda 2>&1 | tail -20",
+      "rc": 0,
+      "out": "",
+      "err": ""
+    },
+    "run": {
+      "cmd": "/tmp/work/driver_probe 2>&1 | tail -5",
+      "rc": 0,
+      "out": "driver ok: 2 device(s), first=Tesla T4",
+      "err": ""
+    }
+  }
+}
